@@ -1,0 +1,7 @@
+.env
+archive.sh
+changed_files.zip
+php-server.pid
+/changed_files/
+node_modules
+/tmp

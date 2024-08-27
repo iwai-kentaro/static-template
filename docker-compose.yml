@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  db:
+    image: mysql:5.7
+    platform: linux/x86_64
+    # restart: always
+    container_name: test_db
+    environment:
+      MYSQL_ROOT_PASSWORD: test
+      MYSQL_DATABASE: test
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    ports:
+      - "8000:80"
+    # restart: always
+    container_name: test_wordpress
+    volumes:
+      - ./dist:/var/www/html
+    environment:
+      WORDPRESS_DB_NAME: test
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: test
+      WORDPRESS_DB_PASSWORD: test

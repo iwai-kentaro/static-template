@@ -1,0 +1,78 @@
+@charset "UTF-8";
+@use "../global" as *;
+
+/*============================
+m-tit
+============================*/
+.m-tit {
+  $m-tit: &;
+  &-white {
+    #{$m-tit}__ja {
+      color: $white-color;
+    }
+    #{$m-tit}__en {
+      color: $white-color;
+    }
+  }
+  &--line {
+    @include flexStyle(center, center);
+    font-size: 24px;
+    @include mq() {
+      font-size: 16px;
+    }
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 25px;
+      height: 1px;
+      // background-color: $grey05;
+      @include mq() {
+        width: 17px;
+      }
+    }
+    &::before {
+      margin-right: 15px;
+      @include mq() {
+        margin-right: 10px;
+      }
+    }
+    &::after {
+      margin-left: 15px;
+      @include mq() {
+        margin-left: 10px;
+      }
+    }
+  }
+  &--under {
+    font-size: 20px;
+    &::after {
+      content: "";
+      display: block;
+      width: 25px;
+      height: 1px;
+      // background-color: $grey05;
+      margin: 10px auto 0;
+    }
+  }
+  &--label {
+    background-color: #f4f4f4;
+    padding: 15px 20px;
+    text-align: left;
+    @include mq() {
+      padding: 10px 20px;
+    }
+  }
+  &__ja {
+    display: block;
+    font-size: 24px;
+    @include mq() {
+      font-size: 20px;
+    }
+  }
+  &__en {
+    display: block;
+    font-size: 12px;
+    color: $text-change-color;
+  }
+}

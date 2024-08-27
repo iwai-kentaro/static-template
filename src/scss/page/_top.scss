@@ -1,0 +1,815 @@
+@charset "UTF-8";
+@use "../global" as *;
+
+/*==========================
+トップ
+.p-top
+==========================*/
+// .p-top {
+//   // 共通
+//   &-common {
+//   }
+//   &-news {
+//     &__container {
+//       display: flex;
+//       align-items: center;
+//       justify-content: flex-start;
+//       height: 110px;
+//       background-color: $bg-sab-color;
+//       padding-left: 9.7%;
+//       gap: 8.4%;
+//       @include mq(sp) {
+//         height: 55px;
+//         padding-left: 15px;
+//         gap: 4.1%;
+//       }
+//     }
+//     &__tit {
+//       font-size: 23px;
+//       @include letter-spacing-calc(100);
+//       @include addfont_Inter(r);
+//       @include mq(sp) {
+//         font-size: 11.5px;
+//       }
+//     }
+//     &__desc {
+//       width: 100%;
+//     }
+//     &__item {
+//       &Anker {
+//         @include flexStyle(flex-start, center);
+//         gap: 2.9%;
+//         max-width: 100%;
+//         overflow: hidden;
+//         text-overflow: ellipsis;
+//         @include mq(sp) {
+//           flex-direction: column;
+//           gap: 0px;
+//           align-items: flex-start;
+//           width: 100%;
+//           white-space: nowrap;
+//           overflow: hidden;
+//           text-overflow: ellipsis;
+//           max-width: 185px;
+//         }
+//       }
+//       &Day {
+//         font-size: 18px;
+//         @include addfont_Inter(r);
+//         @include letter-spacing-calc(100);
+//         color: $text-sab02-color;
+//         padding-top: 4px;
+//         @include mq(tb) {
+//           font-size: 18px;
+//         }
+//         @include mq(sp) {
+//           font-size: 11px;
+//         }
+//       }
+//       &Tit {
+//         font-size: 18px;
+//         font-weight: 400;
+//         @include letter-spacing-calc(30);
+//         text-align: left;
+//         @include mq(tb) {
+//           font-size: 18px;
+//         }
+//         @include mq(sp) {
+//           font-size: 10.5px;
+//           text-align: left;
+//           white-space: nowrap;
+//           overflow: hidden;
+//           text-overflow: ellipsis;
+//           max-width: 185px;
+//           width: 100%;
+//         }
+//         white-space: nowrap;
+//         overflow: hidden;
+//         text-overflow: ellipsis;
+//       }
+//     }
+//     &__swiper {
+//       width: fit-content;
+//     }
+//     &__custom {
+//       &Pagination {
+//         display: inline-block;
+//         font-size: 23px;
+//         white-space: nowrap;
+//         @include mq(sp) {
+//           font-size: 11.5px;
+//           padding-bottom: 5px;
+//         }
+//       }
+//     }
+//     &__pagination {
+//       width: auto;
+//       &Wrapper {
+//         @include flexStyle(center, center);
+//         max-width: 200px;
+//         width: 100%;
+//         height: auto;
+//         margin-right: 6.4%;
+//         @include mq(sp) {
+//           margin-right: 17.5px;
+//           padding-left: 10px;
+//         }
+//         .swiper-button-next {
+//           position: static;
+//           margin-top: initial;
+//           color: $primary-color;
+//           &::after {
+//             font-size: 23px;
+//             margin-left: 20px;
+//             @include mq(sp) {
+//               font-size: 11.5px;
+//               margin-left: 0px;
+//             }
+//           }
+//           &.swiper-button-disabled {
+//             color: $white-color;
+//             opacity: 1;
+//           }
+//         }
+//         .swiper-button-prev {
+//           position: static;
+//           margin-top: initial;
+//           color: $primary-color;
+//           &::after {
+//             font-size: 23px;
+//             margin-right: 20px;
+//             @include mq(sp) {
+//               font-size: 11.5px;
+//               margin-right: 0px;
+//             }
+//           }
+//           &.swiper-button-disabled {
+//             color: $white-color;
+//             opacity: 1;
+//           }
+//         }
+//       }
+//     }
+//   }
+//   &-link {
+//     &__box {
+//       @include flexStyle(center, center);
+//       width: 100vw;
+//       margin-left: calc(50% - 50vw);
+//       @include mq(sp) {
+//         flex-direction: column;
+//       }
+//     }
+//     &__img {
+//       width: 100%;
+//       position: relative;
+//       z-index: 1;
+//       height: 700px;
+//         @include mq(sp) {
+//           height: 350px;
+//         }
+//       &::after {
+//         display: block;
+//         content: "";
+//         // max-width: 640px;
+//         width: 100%;
+//         height: 100%;
+//         background-color: $primary-color;
+//         position: absolute;
+//         z-index: 2;
+//         top: 0;
+//         left: 0;
+//         animation-name: filler-out;
+//         animation-duration: 0.2s;
+//         animation-fill-mode: forwards;
+//         animation-delay: 0;
+//         opacity: 0;
+
+//       }
+//       &.is-hover {
+//         &::after {
+//           display: block;
+//           content: "";
+//           // max-width: 640px;
+//           width: 100%;
+//           height: 100%;
+//           background-color: $primary-color;
+//           opacity: 0.46;
+//           position: absolute;
+//           z-index: 2;
+//           top: 0;
+//           left: 0;
+//           animation-name: filler;
+//           animation-duration: 0.2s;
+//           animation-fill-mode: forwards;
+//           animation-delay: 0;
+//         }
+//       }
+//       img{
+//         // max-width: 640px;
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//         position: absolute;
+//         display: block;
+//         aspect-ratio: 375/350;
+//       }
+//       &:nth-child(1) {
+//         .p-top-link__imgAnker {
+//             @include mq(sp) {
+//               max-width: fit-content;
+//               width: 100%;
+//               height: auto;
+//               position: absolute;
+//               right: 0;
+//               top: 41px;
+//             }
+//         }
+//         .p-top-link__imgTit {
+//           top: rclamp(37.5, 58, 375, 1920);
+//           right: rclamp(26.5, 52, 375, 1920);
+//             @include mq(sp) {
+//               top: initial;
+//               right: inherit;
+//               padding-top: 15px;
+//               padding-left: 20px;
+//               padding-right: 52px;
+//               padding-bottom: 33px;
+//             }
+//         }
+//         .p-top-link__imgTxt {
+//           top: rclamp(67, 108, 375, 1920);
+//           right: rclamp(46, 79, 375, 1920);
+//           &.is-hoverSp{
+//             @include mq(sp) {
+//               font-size: 9px;
+//               display: flex;
+//               align-items: center;
+//               justify-content: center;
+//               gap: 6px;
+//               top: 13px;
+//               right: 26px;
+//               &::after{
+//                 content: "";
+//                 display: inline-block;
+//                 background-image: url(#{$imgPath}img/top/sp-rightArrow.png);
+//                 background-position: center;
+//                 background-size: cover;
+//                 width: 4.5px;
+//                 height: 9px;
+//               }
+//             }
+//           }
+//         }
+//       }
+//       &:nth-child(2) {
+//         height: 600px;
+//           @include mq(sp) {
+//             max-width: 320px;
+//             width: 100%;
+//             height: 300px;
+//             margin: 0 auto;
+
+//           }
+//         img{
+//           @include mq(sp) {
+//             max-width: 320px;
+//             width: 100%;
+//             height: 100%;
+//             margin: 0 auto;
+//           }
+//         }
+//         .p-top-link__imgAnker {
+//           @include mq(sp) {
+//             max-width: fit-content;
+//             width: 100%;
+//             height: auto;
+//             position: absolute;
+//             left: 0;
+//             top: 41px;
+//           }
+//         }
+//         .p-top-link__imgTit {
+//           top: rclamp(80, 162, 375, 1920);
+//           left: rclamp(26, 72, 375, 1920);
+//             @include mq(sp) {
+//               top: inherit;
+//               left: inherit;
+//               padding-top: 15px;
+//               padding-right: 63px;
+//               padding-bottom: 38px;
+//               padding-left: 22px;
+//             }
+//         }
+//         .p-top-link__imgTxt {
+//           top: rclamp(109, 208, 375, 1920);
+//           left: rclamp(32, 76, 375, 1920);
+//           &.is-hoverSp{
+//             @include mq(sp) {
+//               font-size: 9px;
+//               display: flex;
+//               align-items: center;
+//               justify-content: center;
+//               gap: 6px;
+//               right: inherit;
+//               left: 83px;
+//               top: 60px;
+//               &::after{
+//                 content: "";
+//                 display: inline-block;
+//                 background-image: url(#{$imgPath}img/top/sp-rightArrow.png);
+//                 background-position: center;
+//                 background-size: cover;
+//                 width: 4.5px;
+//                 height: 9px;
+//               }
+//             }
+//           }
+//         }
+//       }
+//       &:nth-child(3) {
+//         .p-top-link__imgAnker {
+//           @include mq(sp) {
+//             max-width: fit-content;
+//             width: 100%;
+//             height: auto;
+//             position: absolute;
+//             right: 0;
+//             top: 41px;
+//           }
+//         }
+//         .p-top-link__imgTit {
+//           top: rclamp(37.5, 57, 375, 1920);
+//           right: rclamp(28.9, 66.5, 375, 1920);
+//           @include mq(sp) {
+//             top: initial;
+//             right: inherit;
+//             padding-top: 13px;
+//             padding-left:35px;
+//             padding-right: 56px;
+//             padding-bottom: 34px;
+//           }
+//         }
+//         .p-top-link__imgTxt {
+//           top: rclamp(69, 105, 375, 1920);
+//           right: rclamp(35, 66, 375, 1920);
+//           &.is-hoverSp{
+//             @include mq(sp) {
+//               font-size: 9px;
+//               display: flex;
+//               align-items: center;
+//               justify-content: center;
+//               gap: 6px;
+//               top: 12px;
+//               right: 22px;
+//               &::after{
+//                 content: "";
+//                 display: inline-block;
+//                 background-image: url(#{$imgPath}img/top/sp-rightArrow.png);
+//                 background-position: center;
+//                 background-size: cover;
+//                 width: 4.5px;
+//                 height: 9px;
+//               }
+//             }
+//           }
+//         }
+//       }
+
+//       &Anker {
+//         max-width: 640px;
+//         width: 100%;
+//         height: auto;
+//         position: relative;
+//         display: block;
+//         aspect-ratio: 375/350;
+//         z-index: 10;
+      
+//         &:hover {
+//           opacity: 1;
+//         }
+
+//       }
+//       &Tit {
+//         position: absolute;
+//         font-size: 24px;
+//         @include addfont_Inter(r);
+//         color: $white-color;
+//         @include letter-spacing-calc(50);
+//         // animation-name: topLinkHoverTit-out;
+//         animation-duration: 0.2s;
+//         animation-fill-mode: forwards;
+//         animation-delay: 0;
+//         opacity: 1;
+//         z-index: 3;
+//         @include mq(sp) {
+//           font-size: 15px;
+//         }
+//         &::after {
+//           display: inline-block;
+//           content: "";
+//           width: 100%;
+//           height: 1px;
+//           background-color: $white-color;
+//           position: absolute;
+//           left: 0;
+//           bottom: -10px;
+//           transform: scale(0, 1);
+//           transform-origin: left;
+//             @include mq(sp) {
+//               width: 27.5px;
+//               left: initial;
+//               right: 22px;
+//               margin-right: 52px;
+//               margin-bottom:28px;
+//             }
+//         }
+//         &.is-hover {
+//           animation-name: topLinkHoverTit;
+//           animation-duration: 0.2s;
+//           animation-fill-mode: forwards;
+//           animation-delay: 0;
+//             @include mq(sp) {
+//             }
+//           &::after {
+//             content: "";
+//             animation-name: topLinkHover;
+//             animation-duration: 1s;
+//             animation-fill-mode: forwards;
+//             animation-delay: 0.7s;
+//             opacity: 0;
+//             @include mq(sp) {
+//             }
+//           }
+//         }
+//       }
+//       &Txt {
+//         font-size: 21px;
+//         @include fontStyle();
+//         font-weight: 300;
+//         @include line-height-calc(42, 21);
+//         @include letter-spacing-calc(0);
+//         position: absolute;
+//         color: $white-color;
+//         opacity: 0;
+//         z-index: 3;
+//         @include mq(sp) {
+//           font-size: 11.5px;
+//           position: relative;
+//           z-index: 3;
+//         }
+//         &.is-hover {
+//           animation-name: topLinkHoverTit;
+//           animation-duration: 0.4s;
+//           animation-fill-mode: forwards;
+//           animation-delay: 1.5s;
+//             @include mq(sp) {
+//               display: none;
+//             }
+//         }
+//         &.is-hoverSp{
+//           display: none;
+//           @include addfont_Inter(r);
+//             @include mq(sp) {
+//               display: inline-block;
+//             }
+//         }
+//       }
+//     }
+//   }
+//   &-service {
+//     height: 100%;
+//     &__tit {
+//       font-size: 24px;
+//       @include addfont_Inter(r);
+//       @include letter-spacing-calc(50);
+//       color: $text-sab-color;
+//       margin-top: 173px;
+//       margin-bottom: 87px;
+//       @include mq(sp) {
+//         margin-top: 45.5px;
+//         margin-bottom: 24px;
+//         font-size: 15px;
+//       }
+//     }
+//     &__business {
+//       &Box {
+//         position: relative;
+//         width: 100%;
+//         height: 960px;
+//           @include mq(sp) {
+//             height: 325px;
+//           }
+//         & + .p-top-service__businessBox {
+//           margin-top: 116px;
+//           @include mq(sp) {
+//             margin-top: 40px;
+//           }
+//         }
+//         &Anker {
+//           position: absolute;
+//           display: block;
+//           z-index: 3;
+//           transition: all 0.2s;
+//           width: 100%;
+//           height: 100%;
+//           &:hover {
+//             opacity: 1;
+//           }
+//         }
+//         &Tit {
+//           font-size: 32px;
+//           @include letter-spacing-calc(50);
+//           color: $text-sab-color;
+//           @include addfont_Inter(r);
+//           padding: 27px 0;
+//           background-color: $primary-color;
+//           @include pac();
+//           white-space: nowrap;
+//           max-width: 465px;
+//           width: 100%;
+//           height: auto;
+//           animation-name: serviceHoverTitOut;
+//           animation-duration: 0.5s;
+//           animation-fill-mode: forwards;
+//           animation-delay: 0;
+//           opacity: 1;
+//           @include mq(sp) {
+//             font-size: 14px;
+//             max-width: 205px;
+//             padding: 12px 0;
+//             animation-name: serviceHoverTitOutSp;
+//             opacity: 0;
+//           }
+//           &Hover {
+//             opacity: 0;
+//             display: inline-block;
+//             width: 0px;
+//             animation-name: serviceHoverTitJapOut;
+//             animation-duration: 0.5s;
+//             animation-fill-mode: forwards;
+//             animation-delay: 0;
+//             margin-left: rclamp(10.5, 21, 375, 1920);
+//             font-size: 16.8px;
+//             @include line-height-calc(42, 21);
+//             @include letter-spacing-calc(0);
+//             @include fontStyle();
+//             font-weight: 300;
+//               @include mq(sp) {
+//                 &::after{
+//                   content: "";
+//                   display: inline-block;
+//                   background-image: url(#{$imgPath}img/top/sp-rightArrow.png);
+//                   background-position: center;
+//                   background-size: cover;
+//                   width: 4.5px;
+//                   height: 9px;
+//                   margin-left: 10px;
+//                 }
+//               }
+//             @include mq(sp) {
+//               font-size: 10.5px;
+//             }
+//             &.is-serviceHover {
+//               // display: inline-block;
+//               // position: static;
+//               animation-name: serviceHoverTitJapOn;
+//               animation-duration: 0.5s;
+//               animation-fill-mode: forwards;
+//               animation-delay: 1.5s;
+//                 @include mq(sp) {
+//                   animation: none;
+//                 }
+//             }
+//           }
+//           &.is-serviceHover {
+//             animation-name: serviceHoverTitOn;
+//             animation-duration: 0.5s;
+//             animation-fill-mode: forwards;
+//             animation-delay: 0.5s;
+//             // opacity: 1;
+//             @include mq(sp) {
+//               animation-name: serviceHoverTitOnSp;
+//             }
+//           }
+//         }
+//         &Img {
+//           max-width: 960px;
+//           width: 100%;
+//           height: auto;
+//           position: relative;
+//           z-index: -1;
+//           margin: 0 auto;
+//           &::after {
+//             content: "";
+//             display: block;
+//             max-width: 960px;
+//             width: 100%;
+//             height: 100%;
+//             position: absolute;
+//             background-color: $white-color;
+//             z-index: 1;
+//             top: 0;
+//             left: 0;
+//             animation-name: serviceHoverOut;
+//             animation-duration: 0.3s;
+//             animation-fill-mode: forwards;
+//             animation-delay: 0;
+//           }
+//           &.is-serviceHover {
+//             &::after {
+//               content: "";
+//               display: block;
+//               max-width: 960px;
+//               width: 100%;
+//               height: 100%;
+//               position: absolute;
+//               z-index: 1;
+//               top: 0;
+//               left: 0;
+//               animation-name: serviceHoverOn;
+//               animation-duration: 0.3s;
+//               animation-fill-mode: forwards;
+//               animation-delay: 0;
+//             }
+//           }
+//           img {
+//             max-width: 960px;
+//             width: 100%;
+//             height: 476px;
+//             object-fit: cover;
+//               @include mq(sp) {
+//                 height: 161px;
+//               }
+//           }
+//           & + .p-top-service__businessBoxImg {
+//             margin-top: rclamp(2.5, 10, 375, 1920);
+//           }
+//         }
+//       }
+//     }
+//   }
+//   &-recruit {
+//     margin-top: 212px;
+//     margin-bottom: 129px;
+//     height: 600px;
+//     @include mq(sp) {
+//       margin-top: 65px;
+//       margin-bottom: 58.5px;
+//       position: relative;
+//       height: 300px;
+//     }
+//     &Anker {
+//       display: block;
+//       width: 100%;
+//       height: 100%;
+//       &:hover {
+//         opacity: 1;
+//       }
+//         @include mq(sp) {
+//           position: absolute;
+//           width: fit-content;
+//           left: 50%;
+//           // top: 50%;
+//         }
+//     }
+//     &__tit {
+//       font-size: 24px;
+//       @include addfont_Inter(r);
+//       @include letter-spacing-calc(50);
+//       color: $text-sab-color;
+//       position: absolute;
+//       z-index: 3;
+//       top: 50%;
+//       left: 50%;
+//       transform: translate(-50%, calc(-50% + 20px));
+//       opacity: 0;
+//       animation-name: recruitHoverTitOut;
+//       animation-duration: 0.2s;
+//       animation-fill-mode: forwards;
+//       animation-delay: 0;
+//       @include mq(sp) {
+//         font-size: 15px;
+//         padding-top: 13.5px;
+//         padding-right: 40px;
+//         padding-bottom: 15.5px;
+//         padding-left: 43.5px;
+//       }
+//       &::after {
+//         display: inline-block;
+//         content: "";
+//         width: 100%;
+//         height: 1px;
+//         background-color: $white-color;
+//         position: absolute;
+//         left: 0;
+//         bottom: 0;
+//         transform: scale(0, 1);
+//         transform-origin: left;
+//         animation-name: topLinkHover-out;
+//         animation-duration: 1s;
+//         animation-fill-mode: forwards;
+//         animation-delay: 0;
+//           @include mq(sp) {
+//             animation:none;
+//             content: "";
+//             display: inline-block;
+//             background-image: url(#{$imgPath}img/top/sp-rightArrow.png);
+//             background-position: center;
+//             background-size: cover;
+//             width: 4.5px;
+//             height: 9px;
+//             opacity: 1;
+//           }
+//       }
+//       &.is-recruitHover {
+//         animation-name: recruitHoverTitOn;
+//         animation-duration: 0.2s;
+//         animation-fill-mode: forwards;
+//         animation-delay: 0;
+//           @include mq(sp) {
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             gap: 9px;
+//           }
+//         &::after {
+//           content: "";
+//           animation-name: topLinkHover;
+//           animation-duration: 1s;
+//           animation-fill-mode: forwards;
+//           animation-delay: 0.7s;
+//           opacity: 0;
+//             @include mq(sp) {
+//               animation:none;
+//               content: "";
+//               display: inline-block;
+//               background-image: url(#{$imgPath}img/top/sp-rightArrow.png);
+//               background-position: center;
+//               background-size: cover;
+//               width: 6.5px;
+//               height: 13.5px;
+//               opacity: 1;
+//               position: static;
+//               transform: scale(1,1);
+//               background-color: transparent;
+//             }
+//         }
+//       }
+//     }
+//     &__img {
+//       width: 100vw;
+//       height: 600px;
+//       object-fit: cover;
+//       margin-left: calc(50% - 50vw);
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       z-index: -1;
+//         @include mq(sp) {
+//           height: 300px;
+//         }
+//       &::after {
+//         content: "";
+//         display: block;
+//         width: 100vw;
+//         height: 100%;
+//         background-color: $primary-color;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         opacity: 0;
+//         animation-name: recruitHoverOut;
+//         animation-duration: 0.2s;
+//         animation-fill-mode: forwards;
+//         animation-delay: 0;
+//       }
+//       &.is-recruitHover {
+//         &::after {
+//           content: "";
+//           display: block;
+//           width: 100vw;
+//           height: 100%;
+//           background-color: $primary-color;
+//           position: absolute;
+//           top: 0;
+//           left: 0;
+//           animation-name: recruitHoverOn;
+//           animation-duration: 0.2s;
+//           animation-fill-mode: forwards;
+//           animation-delay: 0;
+//         }
+//       }
+//       img {
+//         max-width: 1920px;
+//         width: 100%;
+//         height: 600px;
+//         object-fit: cover;
+//         @include mq(sp) {
+//           max-width: 375px;
+//           height: 300px;
+//         }
+//       }
+//     }
+//   }
+// }

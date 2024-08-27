@@ -95,8 +95,3 @@ localhost:8000にアクセスをすることで、Browsersyncを介さないサ�
 8. git push => ブランチの変更をpush
 
 git push => 2回目以降のpush
-
-
-
-
-git push --set-upstream origin main  => 初回追跡用

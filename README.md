@@ -85,11 +85,17 @@ localhost:8000にアクセスをすることで、Browsersyncを介さないサ�
 
 
 # gitのコマンド
-git init => Gitと接続
-git add . =>gitにcommitするために上げる
-git commit -m " " => commit名を決めcommit
-git push => commitをpushさせる
+1. git init => git初期化
+2. git add . =>gitにステージング
+3. git commit -m "" => commitを作成
+4. git push --set-upstream origin main  => 初回push => git push => 2回目以降のpush
+5. git branch <ブランチ名> => ブランチ作成<>は必要なし 例:feature/test
+6. git checkout <ブランチ名> => ブランチに移動
+7. git push => ブランチの変更をpush
 
-git branch <ブランチ名> => ブランチ作成<>は必要なし 例:feature/test
-git checkout <ブランチ名> => ブランチに移動
+git push => 2回目以降のpush
+
+
+
+
 git push --set-upstream origin main  => 初回追跡用

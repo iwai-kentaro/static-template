@@ -92,3 +92,4 @@ git push => commitをpushさせる
 
 git branch <ブランチ名> => ブランチ作成<>は必要なし 例:feature/test
 git checkout <ブランチ名> => ブランチに移動
+git push --set-upstream origin main  => 初回追跡用

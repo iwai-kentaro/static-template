@@ -1,0 +1,33 @@
+@charset "UTF-8";
+@use "../global" as *;
+
+/*============================
+.l-foot
+============================*/
+.l-foot{
+  width: 100vw;
+  height: 356px;
+  background-image: url("../images/global/footbc.png");
+  &__inner{
+    max-width: 1080px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  &__img-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 356px;
+    gap: 200.9px;
+  }
+  &__buy-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48.5px;
+  }
+  &__tit{
+
+  }
+}

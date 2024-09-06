@@ -1,0 +1,67 @@
+@charset "UTF-8";
+@use "../global" as *;
+
+/*==========================
+リフタージュのこだわり
+p-ingredients
+==========================*/
+.p-ingredients {
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+  &-main {
+    &__inner {
+      max-width: 1080px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+    &__tit03 {
+      &_04 {
+        margin-top: 153.3px;
+        margin-bottom: 80.3px;
+      }
+      &_05 {
+        margin-top: 176.3px;
+        margin-bottom: 79.4px;
+      }
+    }
+    &__txt01 {
+      p {
+        font-size: 18px;
+        @include fontStyle();
+        font-weight: normal;
+        letter-spacing: 0.005em;
+        line-height: calc(36 / 18);
+      }
+    }
+    &__imgRbox {
+      margin-top: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 42px;
+      width: 100%;
+      height: 100%;
+      &-txtL {
+        text-align: left;
+        max-width: 460px;
+        width: 100%;
+        height: auto;
+        p {
+          display: block;
+          @include fontStyle();
+          font-size: 16px;
+          letter-spacing: 0.005em;
+          line-height: calc(32 / 16);
+        }
+      }
+      &-imgR {
+        max-width: 538px;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

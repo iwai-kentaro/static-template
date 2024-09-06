@@ -4,201 +4,103 @@
 /*============================
 .l-mv
 ============================*/
-// .l-mv {
-//   &-top {
-//     &.swiper {
-//       width: 100vw !important;
-//       height: auto;
-//         @include mq(sp) {
-//           height: 100vh;
-//           object-fit: cover;
-//         }
-//     }
-//     &__inner {
-//     }
-//     &__item{
-//       position: relative;
-//     }
-//     &__tit {
-//       position: absolute;
-//       z-index: 9999;
-//       top: 50%;
-//       left: 0%;
-//       transform: translate(0%, -50%);
-//       color: $white-color;
-//       font-size: 26.4px;
-//       @include fontStyle();
-//       font-weight: 300;
-//         @include mq(sp) {
-//           font-size: 20px;
-//           white-space: nowrap;
-//         }
-//         &First{
-//           @include addfont_Ryumin(l);
-//         }
-//       &.fadeLeft {
-//         animation-name: fadeLeft;
-//         animation-duration: 2s;
-//         animation-fill-mode: forwards;
-//         animation-delay: 1.5s;
-//         opacity: 0;
-//       }
-
-//       &Sub {
-//         @include addfont_Inter(r);
-//         position: absolute;
-//         z-index: 1;
-//         top: 50%;
-//         right: 40%;
-//         transform: translate(0%, -10%);
-//         font-size: 22.4px;
-//         @include letter-spacing-calc(50);
-//           @include mq(sp) {
-//             font-size: 19.2px;
-//           }
-//         &.fadeRight{
-//           animation-name: fadeRight;
-//           animation-duration: 2s;
-//           animation-fill-mode: forwards;
-//           animation-delay: 1s;
-//           opacity: 0;
-//         }
-//         &Vertical{
-//           position: absolute;
-//           z-index: 1;
-//           top: 0;
-//           right: 32%;
-//           transform: translate(0, 0px);
-//           font-size: 22px;
-//           @include addfont_Ryumin(l);
-//           color: $white-color;
-//           writing-mode: vertical-rl;
-//           vertical-align: middle;
-//           text-align: center;
-//           font-feature-settings: initial;
-//           &Num{
-//             text-combine-upright: all;
-//           }
-//             @include mq(sp) {
-//               font-size: 11.5px;
-//               right: 10%;
-//             }
-//           &.fadeDown{
-//             animation-name: fadeDown;
-//             animation-duration: 2s;
-//             animation-fill-mode: forwards;
-//             animation-delay: 1s;
-//             opacity: 0;
-//               @include mq(sp) {
-//                 animation-name: spFadeDown;
-//               }
-//           }
-//         }
-//       }
-//     }
-//     &__item {
-//       &.swiper-slide {
-//         width: 100vw !important;
-//         height: auto;
-//         object-fit: cover;
-//         @include mq(sp) {
-//           height: 100vh;
-//           object-fit: cover;
-//         }
-//         img {
-//           width: 100vw !important;
-//           height: auto;
-//           object-fit: cover;
-//           @include mq(sp) {
-//             height: 100vh;
-//             object-fit: cover;
-//           }
-//         }
-//       }
-//     }
-//     &__pagination{
-//       // 通常
-//        @include flexStyle(center , center);
-//        gap: 129px;
-//        bottom: 68px !important;
-//       //  margin-bottom: 68px;
-//          @include mq(sp) {
-//           max-width: 272px;
-//           width: 100%;
-//           height: auto;
-//           gap: 36.5px;
-//           bottom: 33.5px !important;
-//           left: 50% !important;
-//           transform: translateX(-50%);
-//           justify-content: space-between;
-//          }
-//       .swiper-pagination-bullet{
-//         display: block;
-//         color: $primary-sab-color;
-//         background-color: $primary-sab-color;
-//         &:nth-child(1){
-//           max-width: 115px;
-//           width: 100%;
-//           height: 1px;
-//             @include mq(sp) {
-//               max-width: 57.5px;
-//             }
-//         }
-//         &:nth-child(2){
-//           width: 0;
-//           height: 0;
-//           position: relative;
-//           &::before{
-//             position: absolute;
-//             // top: -18px;
-//             transform: translate(-50%,-50%);
-//             display: block;
-//             content: "Luxury";
-//             font-size: 23px;
-//             @include addfont_Inter(r);
-//               @include mq(sp) {
-//                 font-size: 11.5px;
-//               }
-//           }
-//         }
-//         &:nth-child(3){
-//           width: 0;
-//           height: 0;
-//           position: relative;
-//           &::before{
-//             position: absolute;
-//             transform: translate(-50%,-50%);
-//             display: block;
-//             content: "Relax";
-//             font-size: 23px;
-//             @include addfont_Inter(r);
-//             @include mq(sp) {
-//               font-size: 11.5px;
-//             }
-//           }
-//         }
-//         &:nth-child(4){
-//           width: 0;
-//           height: 0;
-//           position: relative;
-//           &::before{
-//             position: absolute;
-//             transform: translate(-50%,-50%);
-//             display: block;
-//             content: "Spice";
-//             font-size: 23px;
-//             @include addfont_Inter(r);
-//             @include mq(sp) {
-//               font-size: 11.5px;
-//             }
-//           }
-//         }
-//       }
-//       // アクティブ
-//       .swiper-pagination-bullet-active{
-//       }
-//     }
-//   }
-//   &-under {
-//   }
-// }
+.l-mv {
+  width: 100vw;
+  min-height: 428px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../images/top/top_02.png");
+  &__inner {
+    position: relative;
+    min-height: 813px;
+    max-width: 1080px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  &__tit {
+    width: fit-content;
+    height: auto;
+    position: absolute;
+    top: 234px;
+    transform: translateY(-50%);
+    left: 29px;
+  }
+  &__img {
+    &Top{
+      position: absolute;
+      top: 111px;
+      right: 91px;
+      &02{
+        position: absolute;
+        left: 14px;
+        bottom: 259px;
+      }
+      &03{
+        position: absolute;
+        bottom: 36px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    &Drink {
+      position: absolute;
+      bottom: 27px;
+      right: 163px;
+    }
+    &Collagen {
+      position: absolute;
+      bottom: 46px;
+      right: 22px;
+    }
+    &Ingredients{
+      position: absolute;
+      bottom: 0px;
+      right: 71px;
+    }
+    &Order{
+      position: absolute;
+      right: 0;
+      bottom: 122px;
+    }
+    &voice_mv{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  &__txt{
+    max-width: 785px;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 196.4px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 32.5px;
+    &Item {
+      @include fontStyle();
+      font-size: 14px;
+      color: $wht01;
+      padding-right: 10.5px;
+      padding-left: 10.5px;
+      & + li {
+        border-left: 1px solid $wht01;
+      }
+      a {
+        color: $wht01;
+        letter-spacing: 0.05em;
+        line-height: calc(24 / 14);
+        padding-bottom: 10px;
+        &.current {
+          border-bottom: 1px solid $wht01;
+        }
+      }
+    }
+  }
+}

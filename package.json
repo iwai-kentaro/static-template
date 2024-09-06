@@ -1,8 +1,8 @@
 {
   "private": true,
-  "name": "yy-tmp-ver_1.02",
+  "name": "YY-tmp-ver_1.02",
   "config": {
-    "dist": "./dist/wp-content/themes/title",
+    "dist": "./dist/contents/brands/title/",
     "tmp": "./tmp/css",
     "src": "./src/scss"
   },
@@ -11,28 +11,29 @@
     "npm": "7.10.0"
   },
   "browserslist": [
-    "last 3 versions",
-    "not dead"
+    "last 2 versions",
+    "ie 11"
   ],
   "scripts": {
     "start": "run-s clean copy build dev babel",
     "release": "run-s clean copy release:css",
-    "dev": "run-p bs watch babel:*",
+    "dev": "run-p php bs watch babel:*",
+    "php": "php -S 0.0.0.0:8000 -t ./dist/contents/brands/title/ & echo $! > php-server.pid",
     "bs": "browser-sync start --config bs-config.js",
     "build": "run-s build:css",
     "watch": "run-p watch:css",
-    "babel": "./node_modules/.bin/babel src --out-dir $npm_package_config_dist/assets",
+    "babel": "./node_modules/.bin/babel src --out-dir $npm_package_config_dist",
     "clean": "run-s clean:*",
-    "clean:css": "rimraf $npm_package_config_dist/assets/css/**/*",
+    "clean:css": "rimraf $npm_package_config_dist/css/**/*",
     "clean:tmp": "rimraf $npm_package_config_tmp**/*",
     "copy": "run-s copy:*",
     "build:sass": "sass $npm_package_config_src:tmp/css --no-source-map --style=expanded",
     "watch:sass": "sass $npm_package_config_src:tmp/css --no-source-map --style=expanded -w",
-    "babel:watch": "./node_modules/.bin/babel src --out-dir $npm_package_config_dist/assets/ --watch",
+    "babel:watch": "./node_modules/.bin/babel src --out-dir $npm_package_config_dist/ --watch",
     "release:sass": "sass $npm_package_config_src:tmp/css --no-source-map --style=expanded",
-    "build:ap": "postcss $npm_package_config_tmp --use mqpacker autoprefixer --base $npm_package_config_tmp -d $npm_package_config_dist/assets/css/ --no-map",
-    "watch:ap": "postcss $npm_package_config_tmp --use mqpacker autoprefixer --base $npm_package_config_tmp -d $npm_package_config_dist/assets/css/ --no-map -w",
-    "release:ap": "postcss $npm_package_config_tmp --use mqpacker autoprefixer --base $npm_package_config_tmp -d $npm_package_config_dist/assets/css/ --no-map",
+    "build:ap": "postcss $npm_package_config_tmp --use mqpacker autoprefixer --base $npm_package_config_tmp -d $npm_package_config_dist/css/",
+    "watch:ap": "postcss $npm_package_config_tmp --use mqpacker autoprefixer --base $npm_package_config_tmp -d $npm_package_config_dist/css/ -w",
+    "release:ap": "postcss $npm_package_config_tmp --use mqpacker autoprefixer --base $npm_package_config_tmp -d $npm_package_config_dist/css/ --no-map",
     "build:css": "run-s build:sass build:ap",
     "watch:css": "run-p watch:sass watch:ap",
     "release:css": "run-s release:sass release:ap"
@@ -46,6 +47,7 @@
     "cpx": "^1.2.1",
     "mqpacker": "^7.0.0",
     "npm-run-all": "^4.1.5",
+    "php-server": "^0.2.1",
     "postcss": "^8.3.6",
     "postcss-cli": "^8.1.0",
     "prettier": "^2.2.1",
@@ -54,5 +56,9 @@
     "sass": "^1.39.2",
     "stylelint": "^13.8.0",
     "stylelint-config-recess-order": "^2.3.0"
+  },
+  "volta": {
+    "node": "14.16.1",
+    "npm": "7.10.0"
   }
 }

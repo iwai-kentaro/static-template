@@ -1,0 +1,153 @@
+@charset "UTF-8";
+@use "../global" as *;
+
+/*==========================
+リフタージュのこだわり
+p-features
+==========================*/
+.p-features {
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+  &-main {
+    &_inner {
+      max-width: 1080px;
+      width: 100%;
+      height: auto;
+    }
+    &__tit03 {
+      &_13 {
+        margin-top: 153.4px;
+        margin-bottom: 93.5px;
+      }
+    }
+    &__txt01 {
+    }
+    &__txt02 {
+      margin-top: calc(153px + 25px);
+    }
+    &__imgRbox01 {
+      max-width: 1080px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      margin-top: 111px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 80px;
+      &-txtL {
+        max-width: 480px;
+        width: 100%;
+        height: auto;
+        text-align: left;
+        p {
+          font-size: 16px;
+          @include fontStyle();
+          font-weight: normal;
+          line-height: calc(36 / 16);
+          letter-spacing: 0.005em;
+        }
+      }
+      &-imgR {
+        max-width: 462px;
+        width: 100%;
+        height: auto;
+      }
+    }
+    &__imgBtxt02 {
+      max-width: 1080px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      text-align: right;
+      margin-top: 15px;
+      padding-right: 60px;
+      p {
+        font-size: 14px;
+        @include fontStyle();
+        font-weight: normal;
+        letter-spacing: 0.005em;
+        line-height: calc(24 / 14);
+      }
+    }
+
+    &__imgLbox01 {
+      max-width: 1080px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      margin-top: 60px;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: center;
+      gap: 80px;
+      &-txtR {
+        max-width: 478px;
+        width: 100%;
+        height: auto;
+        text-align: left;
+        p {
+          font-size: 16px;
+          @include fontStyle();
+          font-weight: normal;
+          line-height: calc(36 / 16);
+          letter-spacing: 0.005em;
+        }
+      }
+      &-imgL {
+        max-width: 462px;
+        width: 100%;
+        height: auto;
+      }
+    }
+    &__imgBtxt03 {
+      max-width: 1080px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      text-align: left;
+      margin-top: 15px;
+      padding-left: 60px;
+      p {
+        font-size: 14px;
+        @include fontStyle();
+        font-weight: normal;
+        letter-spacing: 0.005em;
+        line-height: calc(24 / 14);
+      }
+    }
+    &__imgRbox02 {
+      max-width: 1080px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      margin-top: 84px;
+      margin-bottom: 140px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 80px;
+      &-txtL {
+        max-width: 480px;
+        width: 100%;
+        height: auto;
+        text-align: left;
+        p {
+          font-size: 16px;
+          @include fontStyle();
+          font-weight: normal;
+          line-height: calc(36 / 16);
+          letter-spacing: 0.005em;
+        }
+      }
+      &-imgR {
+        max-width: 462px;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

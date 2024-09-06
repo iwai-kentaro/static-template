@@ -1,0 +1,132 @@
+@charset "UTF-8";
+@use "../global/import" as g;
+
+/*==========================
+デモページ
+.p-demo
+==========================*/
+.p-demo {
+  .l-main-demo {
+    padding: 100px 0;
+  }
+  &__sec {
+    margin-top: 40px;
+    &Inr {
+      width: 100%;
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+  }
+  &-demoarea {
+    &__switch {
+      background-color: g.$blue01;
+    }
+    &__next {
+      background-color: g.$blk01;
+      color: g.$wht01;
+    }
+  }
+  &-demotab {
+    &__switch {
+      @include g.flexStyle();
+      &Item {
+        width: calc(100% / 3);
+        background-color: g.$grey01;
+        &.is-active {
+          background-color: g.$pink01;
+        }
+      }
+    }
+    &__main {
+      @include g.flexStyle();
+      &Item {
+        background-color: g.$blue01;
+      }
+    }
+  }
+  &-demoinrtab {
+    &__switch {
+      @include g.flexStyle();
+      &Item {
+        width: calc(100% / 3);
+        background-color: g.$grey01;
+        &.is-active {
+          background-color: g.$pink01;
+        }
+      }
+    }
+    &__main {
+      @include g.flexStyle();
+      &Item {
+        background-color: g.$blue01;
+      }
+    }
+  }
+  &-demolinktab {
+    &__switch {
+      @include g.flexStyle();
+      &Item {
+        width: calc(100% / 3);
+        background-color: g.$grey01;
+        &.is-active {
+          background-color: g.$pink01;
+        }
+      }
+    }
+    &__main {
+      @include g.flexStyle();
+      &Item {
+        background-color: g.$blue01;
+      }
+    }
+  }
+  &-demoSlider {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    &__main {
+      &Item {
+        width: 33%;
+        img {
+          margin: 0 auto;
+        }
+      }
+    }
+    .js-slider__modul {
+      @include g.flexStyle(flex-end);
+      &Dots {
+        width: 100%;
+      }
+    }
+  }
+  &-demoSliderSub {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    &__main {
+      &Item {
+        width: 33%;
+        img {
+          margin: 0 auto;
+        }
+      }
+    }
+    .js-slider__modul {
+      @include g.flexStyle(flex-end);
+      &Dots {
+        width: 100%;
+      }
+    }
+  }
+  &-demoHeight {
+    @include g.flexStyle(space-between);
+    margin-top: 40px;
+    &__txt {
+      width: 20%;
+      &Inr {
+        background-color: g.$pink01;
+      }
+      border: 1px solid #000;
+    }
+  }
+}

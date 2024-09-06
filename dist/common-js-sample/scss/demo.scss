@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+// // 共通のscss
+// @use "base/reset";
+
+// // 各レイアウトのscss
+// @use "layout/layout";
+
+// // 各モジュールのscss
+// @use "module/module";
+
+// // 各スクリプトのscss
+// @use "script/script";
+
+// // 各プラグインのscss
+// @use "plugin/slick/slick-theme";
+// @use "plugin/slick/slick";
+
+// 各ページのscss
+@use "page/demo";

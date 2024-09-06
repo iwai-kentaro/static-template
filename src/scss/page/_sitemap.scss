@@ -1,0 +1,89 @@
+@charset "UTF-8";
+@use "../global" as *;
+
+/*==========================
+リフタージュとは
+.p-sitemap
+==========================*/
+.p-sitemap {
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+  &-main {
+    &__inner {
+      padding-top: 140px;
+      padding-bottom: 140px;
+    }
+    &__content {
+      &-box {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 100px;
+      }
+      &01 {
+        text-align: left;
+        max-width: 440px;
+        width: 100%;
+        height: auto;
+        &-item {
+          a {
+            font-size: 20px;
+            font-weight: 700;
+            @include fontStyle();
+            line-height: calc(29 / 20);
+            letter-spacing: 0.005em;
+            color: $theme-color;
+          }
+          &Txt {
+            padding-left: 19.7px;
+          }
+          & + .p-sitemap-main__content01-item {
+            margin-top: 50px;
+          }
+          &Box {
+            padding-left: 34.7px;
+            margin-top: 20px;
+            margin-bottom: 51px;
+            &_txt {
+              a {
+                font-size: 20px;
+                font-weight: 700;
+                @include fontStyle();
+                line-height: calc(29 / 20);
+                letter-spacing: 0.005em;
+                color: $theme-color;
+              }
+              & + .p-sitemap-main__content01-itemBox_txt {
+                padding-top: 20px;
+              }
+            }
+          }
+        }
+      }
+      &02 {
+        text-align: left;
+        max-width: 440px;
+        width: 100%;
+        height: auto;
+        &-item {
+          a {
+            font-size: 20px;
+            font-weight: 700;
+            @include fontStyle();
+            line-height: calc(29 / 20);
+            letter-spacing: 0.005em;
+            color: $theme-color;
+          }
+          &Txt {
+            padding-left: 19.7px;
+          }
+          & + .p-sitemap-main__content02-item {
+            margin-top: 50px;
+          }
+        }
+      }
+    }
+  }
+}

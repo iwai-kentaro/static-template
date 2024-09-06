@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+// 各レイアウトのscss
+@use "layout";
+
+// 各モジュールのscss
+@use "module";
+
+// 各スクリプトのscss
+@use "script";
+
+// 各ページのscss
+@use "page/top";
+@use "page/about";
+@use "page/features";
+@use "page/faq";
+@use "page/collagen";
+@use "page/combination";
+@use "page/elastin";
+@use "page/ingredients";
+@use "page/proteoglycan";
+@use "page/order";
+@use "page/sitemap";
+@use "page/voice";
+@use "page/whitepaper";

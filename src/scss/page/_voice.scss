@@ -1,0 +1,176 @@
+@charset "UTF-8";
+@use "../global" as *;
+
+/*==========================
+ご愛飲者の声
+.p-voice
+==========================*/
+.p-voice {
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+  &-main {
+    &__inner {
+      max-width: 1080px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+    &__content {
+      padding-bottom: 140px;
+      &-desc {
+        &_box01 {
+          max-width: 730px;
+          width: 100%;
+          height: 248px;
+          margin: 0 auto;
+          border: 1px solid $theme-color;
+          margin-top: 140px;
+          a {
+            max-width: 730px;
+            width: 100%;
+            height: 248px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+              object-fit: cover;
+              vertical-align: top;
+            }
+          }
+        }
+        &_box02 {
+          max-width: 365px;
+          width: 100%;
+          height: 248px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-left: 29px;
+          padding-right: 39.4px;
+        }
+        &_txtBox {
+        }
+        &_txtBox01 {
+          text-align: left;
+          font-size: 24px;
+          @include fontStyle();
+          font-weight: 700;
+          line-height: calc(35 / 24);
+          letter-spacing: 0.005em;
+          color: $theme-color;
+        }
+        &_txtBox02 {
+          text-align: left;
+          font-size: 16px;
+          @include fontStyle();
+          font-weight: 400;
+          line-height: calc(24 / 16);
+          letter-spacing: 0.005em;
+          color: $text-base-color;
+          margin-top: 10px;
+        }
+      }
+    }
+    &__tit03 {
+      &_01 {
+        margin-top: 139.5px;
+        margin-bottom: 140.5px;
+      }
+      &_02 {
+        max-width: 768px;
+        width: 100%;
+        height: 116px;
+        margin: 0 auto;
+        background-image: url("../images/voice/voice_03bc.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 184.6px;
+        margin-bottom: 80px;
+      }
+    }
+    &__thirty {
+      &-box {
+        max-width: 957px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        gap: 101px;
+        & + .p-voice-main__thirty-box {
+          margin-top: 30px;
+        }
+      }
+      &-txt {
+        &Box {
+          max-width: 428px;
+          width: 100%;
+          height: auto;
+          border: 1px solid $gold01;
+          padding: 20px;
+        }
+        &01 {
+          text-align: left;
+          font-size: 14px;
+          @include fontStyle();
+          font-weight: 700;
+          line-height: calc(20 / 14);
+          letter-spacing: 0.005em;
+        }
+        &02 {
+          text-align: left;
+          font-size: 20px;
+          @include fontStyle();
+          font-weight: 700;
+          line-height: calc(29 / 20);
+          letter-spacing: 0.005em;
+          color: $theme-color;
+          margin-top: 10px;
+        }
+        &03 {
+          text-align: left;
+          font-size: 16px;
+          @include fontStyle();
+          font-weight: 400;
+          line-height: calc(24 / 16);
+          letter-spacing: 0.005em;
+          margin-top: 15px;
+        }
+      }
+    }
+    &-btn {
+      margin: 0 auto;
+      margin-top: 80px;
+      margin-bottom: 140px;
+      &03 {
+        margin: 0 auto;
+        margin-top: 80px;
+        margin-bottom: 80px;
+      }
+      &__icon {
+        transform: translateX(-23px) rotate(-90deg);
+        &.change__color03 {
+          background-color: $wht01;
+          transform: translateX(-23px) rotate(-90deg);
+        }
+        &.close {
+          transform: translateX(-23px) rotate(90deg);
+          &.rotate {
+            transform: translateX(-23px) rotate(-90deg);
+          }
+        }
+      }
+    }
+    &__box {
+      &.none {
+        display: none;
+      }
+    }
+  }
+}

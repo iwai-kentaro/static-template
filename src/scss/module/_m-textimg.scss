@@ -1,0 +1,41 @@
+@charset "UTF-8";
+@use "../global" as *;
+
+/*============================
+m-textimg
+============================*/
+
+.m-ingredients__imgrbox{
+  justify-content: space-between;
+  gap: 0px;
+}
+
+.p-proteoglycan-main__imgRbox{
+  gap: 37px;
+  position: relative;
+  &::after{
+    display: block;
+    position: absolute;
+    content: "";
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    height: 763.85px;
+    background-image: url("../images/ingredients/proteoglycan/proteoglycan-bc.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    left: 0;
+  }
+}
+
+.p-proteoglycan-main__imgRbox-textL{
+  p{
+    text-align-last: left;
+    font-size: 16px;
+    @include fontStyle();
+    letter-spacing: 0.005em;
+    line-height: calc(32/16);
+
+    }
+
+}

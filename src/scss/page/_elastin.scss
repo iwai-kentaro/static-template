@@ -1,0 +1,44 @@
+@charset "UTF-8";
+@use "../global" as *;
+
+/*==========================
+リフタージュのこだわり
+p-elastin
+==========================*/
+.p-elastin {
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+  &-main {
+    &__inner {
+      max-width: 1080px;
+      width: 100%;
+      height: auto;
+      max-width: 0;
+    }
+    &__tit03 {
+      &-10 {
+        margin-top: 140.2px;
+        margin-bottom: 80.2px;
+      }
+    }
+    &__txt01 {
+      max-width: 853.94px;
+      width: 100%;
+      height: auto;
+      text-align: left;
+      margin: 0 auto;
+      p {
+        font-size: 16px;
+        @include fontStyle();
+        font-weight: normal;
+        letter-spacing: 0.005em;
+        line-height: calc(32 / 16);
+      }
+    }
+    &__img {
+      margin-top: 60.8px;
+    }
+  }
+}

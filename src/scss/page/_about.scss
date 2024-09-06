@@ -1,0 +1,101 @@
+@charset "UTF-8";
+@use "../global" as *;
+
+/*==========================
+リフタージュとは
+.p-about
+==========================*/
+.p-about {
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+  &-main {
+    &__inner {
+      max-width: 1080px;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+    }
+    &__imgRbox {
+      margin-top: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 42px;
+      width: 100%;
+      height: 100%;
+    }
+    &__txtL {
+      text-align: left;
+      p {
+        display: block;
+        @include fontStyle();
+        font-size: 18px;
+        letter-spacing: 0.005em;
+        line-height: calc(26 / 18);
+      }
+    }
+    &__imgR {
+      max-width: 532px;
+      width: 100%;
+      height: auto;
+    }
+    &__tit03 {
+      &_01 {
+        margin-top: 153px;
+        margin-bottom: 74.4px;
+      }
+      &_02 {
+        margin-top: 87.6px;
+        margin-bottom: 80.4px;
+      }
+      &_03 {
+        margin-top: 140.2px;
+        margin-bottom: 80.2px;
+      }
+    }
+    &__imgLbox {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-direction: row-reverse;
+      gap: 71px;
+      width: 100%;
+      height: 100%;
+      margin-top: 140px;
+    }
+    &__txtR {
+      text-align: left;
+      p {
+        display: block;
+        @include fontStyle();
+        font-size: 16px;
+        font-weight: normal;
+        letter-spacing: 0.005em;
+        line-height: calc(26 / 16);
+      }
+    }
+    &__under {
+      &-imgBox {
+      }
+      &-txt {
+        p {
+          text-align: left;
+          font-size: 16px;
+          @include fontStyle();
+          font-weight: normal;
+          letter-spacing: 0.005em;
+          line-height: calc(32 / 16);
+        }
+      }
+      &-imgB {
+        margin-top: 60.1px;
+        &02 {
+          margin-top: 60.1px;
+          margin-bottom: 140.9px;
+        }
+      }
+    }
+  }
+}

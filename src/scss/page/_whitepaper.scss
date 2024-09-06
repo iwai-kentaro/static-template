@@ -1,0 +1,408 @@
+@charset "UTF-8";
+@use "../global" as *;
+
+/*==========================
+愛飲者の実感、リフタージュ白書
+.p-whitepaper
+==========================*/
+.p-whitepaper {
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+  &-main {
+    &__inner {
+      max-width: 1080px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      margin-bottom: 140px;
+    }
+    &__content {
+      max-width: 1080px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      &-box {
+        position: relative;
+      }
+      &-titBox {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 174px;
+        width: 100%;
+        height: 66px;
+      }
+      &-tit {
+        font-size: 20px;
+        @include fontStyle();
+        font-weight: 400;
+        letter-spacing: 0.005em;
+        line-height: calc(44 / 20);
+        background-color: $gold02;
+        max-width: 174px;
+        width: 100%;
+        height: 66px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &-desc {
+        max-width: 1080px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        border: 1px solid $gold02;
+        margin-top: 171px;
+        padding-bottom: 80px;
+        &Txt {
+          &01 {
+            font-size: 40px;
+            @include fontStyle();
+            font-weight: 400;
+            letter-spacing: 0.005em;
+            line-height: calc(58 / 40);
+            color: $theme-color;
+            margin-top: 115px;
+          }
+          &02 {
+            font-size: 24px;
+            @include fontStyle();
+            font-weight: 400;
+            letter-spacing: 0.005em;
+            line-height: calc(35 / 24);
+            margin-top: 60px;
+            margin-bottom: 30px;
+          }
+          &03 {
+            text-align: left;
+            max-width: 622px;
+            width: 100%;
+            margin: 0 auto;
+            font-size: 14px;
+            @include fontStyle();
+            font-weight: 400;
+            letter-spacing: 0.005em;
+            line-height: calc(20 / 14);
+            color: $grey01;
+            white-space: nowrap;
+            margin-top: 20px;
+          }
+          &04 {
+            font-size: 24px;
+            @include fontStyle();
+            font-weight: 400;
+            letter-spacing: 0.005em;
+            line-height: calc(35 / 24);
+            margin-top: 52px;
+          }
+          &05 {
+            font-size: 20px;
+            @include fontStyle();
+            font-weight: 400;
+            letter-spacing: 0.005em;
+            line-height: calc(29 / 20);
+            margin-top: 52px;
+            color: $wht01;
+            background-color: $theme-color;
+            max-width: 95px;
+            width: 100%;
+            height: 39.83px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            margin-top: 82px;
+            margin-bottom: 15.3px;
+            transform: rotate(-6deg);
+          }
+          &06 {
+            font-size: 22px;
+            @include fontStyle();
+            font-weight: 400;
+            letter-spacing: 0.005em;
+            line-height: calc(32 / 22);
+            color: $theme-color;
+          }
+          &07 {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            &_01 {
+              font-size: 44px;
+              @include fontStyle();
+              font-weight: 400;
+              letter-spacing: 0.005em;
+              line-height: calc(64 / 44);
+              color: $theme-color;
+            }
+            &_02 {
+              font-size: 82px;
+              @include fontStyle();
+              font-weight: 400;
+              letter-spacing: 0.005em;
+              line-height: calc(119 / 82);
+              color: $theme-color;
+              display: flex;
+              align-items: baseline;
+            }
+            &_03 {
+              font-size: 20px;
+              @include fontStyle();
+              font-weight: 400;
+              letter-spacing: 0.005em;
+              line-height: calc(29 / 20);
+              color: $text-base-color;
+              transform: translateY(15px);
+            }
+            &_04 {
+              font-size: 44px;
+              @include fontStyle();
+              font-weight: 400;
+              letter-spacing: 0.005em;
+              line-height: calc(64 / 44);
+              color: $theme-color;
+              margin-top: 32px;
+            }
+            &_box {
+              display: flex;
+              flex-direction: column-reverse;
+              align-items: flex-start;
+              justify-content: flex-start;
+              transform: translateY(-60px);
+            }
+          }
+          &08 {
+            font-size: 24px;
+            @include fontStyle();
+            font-weight: 400;
+            letter-spacing: 0.005em;
+            line-height: calc(35 / 24);
+            margin-bottom: 55px;
+          }
+          &09 {
+            font-size: 14px;
+            @include fontStyle();
+            font-weight: 400;
+            letter-spacing: 0.005em;
+            line-height: calc(20 / 14);
+            color: $grey01;
+            margin-top: 20px;
+            margin-bottom: 60px;
+            &_02 {
+              font-size: 14px;
+              @include fontStyle();
+              font-weight: 400;
+              letter-spacing: 0.005em;
+              line-height: calc(20 / 14);
+              color: $grey01;
+              max-width: 648px;
+              width: 100%;
+              margin: 0 auto;
+              text-align: left;
+              margin-top: 20px;
+              margin-bottom: 60px;
+            }
+            &_03 {
+              font-size: 14px;
+              @include fontStyle();
+              font-weight: 400;
+              letter-spacing: 0.005em;
+              line-height: calc(20 / 14);
+              color: $grey01;
+              max-width: 303px;
+              width: 100%;
+              margin: 0 auto;
+              text-align: left;
+              margin-top: 15px;
+            }
+          }
+          &10 {
+            font-size: 24px;
+            @include fontStyle();
+            font-weight: 400;
+            letter-spacing: 0.005em;
+            line-height: calc(35 / 24);
+            margin-bottom: 40px;
+          }
+          &11 {
+            font-size: 18px;
+            @include fontStyle();
+            font-weight: 400;
+            letter-spacing: 0.005em;
+            line-height: calc(36 / 18);
+            margin-bottom: 80px;
+          }
+          &12 {
+            font-size: 24px;
+            @include fontStyle();
+            font-weight: 400;
+            letter-spacing: 0.005em;
+            line-height: calc(35 / 24);
+            margin-bottom: 55px;
+          }
+        }
+        &_itemBox {
+          max-width: 622px;
+          width: 100%;
+          height: 205px;
+          margin: 0 auto;
+          border: 1px solid $text-base-color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 42px;
+          &02 {
+            max-width: 622px;
+            width: 100%;
+            height: 205px;
+            margin: 0 auto;
+            border: 1px solid $text-base-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 72px;
+          }
+        }
+        &_itemTxt {
+          &_box {
+            &01 {
+              text-align: left;
+            }
+            &02 {
+            }
+            &03 {
+              margin-top: -30px;
+            }
+          }
+          &01 {
+            font-size: 30px;
+            @include fontStyle();
+            font-weight: 400;
+            letter-spacing: 0.005em;
+            line-height: calc(44 / 30);
+            color: $theme-color;
+          }
+          &02 {
+            font-size: 40px;
+            @include fontStyle();
+            font-weight: 400;
+            letter-spacing: 0.005em;
+            line-height: calc(58 / 40);
+            color: $theme-color;
+          }
+          &03 {
+            font-size: 72px;
+            @include fontStyle();
+            font-weight: 400;
+            letter-spacing: 0.005em;
+            line-height: calc(105 / 72);
+            color: $theme-color;
+          }
+          &04 {
+            font-size: 30px;
+            @include fontStyle();
+            font-weight: 400;
+            letter-spacing: 0.005em;
+            line-height: calc(44 / 30);
+            color: $theme-color;
+            text-align: left;
+          }
+        }
+        &_btn {
+          margin: 0 auto;
+          a {
+            justify-content: center;
+          }
+          &Txt {
+            padding-left: 0;
+          }
+          &Icon {
+            position: absolute;
+            right: 0;
+          }
+        }
+        &_box {
+          max-width: 944px;
+          width: 100%;
+          height: auto;
+          margin: 0 auto;
+          margin-top: 80px;
+          background-color: $pink06;
+          padding-top: 93.3px;
+          padding-bottom: 80px;
+        }
+        &_list {
+          max-width: 250px;
+          width: 100%;
+          height: auto;
+          position: relative;
+          &Box {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 51px;
+          }
+          &Day {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -37px);
+            max-width: 60px;
+            width: 100%;
+            height: 60px;
+            border-radius: 50%;
+            background-color: $gold03;
+            color: $wht01;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            @include fontStyle();
+            font-weight: 400;
+            line-height: calc(35 / 24);
+            letter-spacing: 0.005em;
+          }
+          &Txt {
+            max-width: 250px;
+            width: 100%;
+            height: auto;
+            border: 1px solid $theme-color;
+            background-color: $wht01;
+
+            &Box {
+              padding-bottom: 34px;
+              padding-top: 58px;
+              &03 {
+                padding-bottom: 43px;
+                padding-top: 20px;
+              }
+            }
+            &01 {
+              font-size: 20px;
+              @include fontStyle();
+              font-weight: 400;
+              line-height: calc(29 / 20);
+              letter-spacing: 0.005em;
+              color: $theme-color;
+              text-align: left;
+              padding-left: 21px;
+              padding-right: 17px;
+            }
+            &02 {
+              font-size: 14px;
+              @include fontStyle();
+              font-weight: 400;
+              line-height: calc(20 / 14);
+              letter-spacing: 0.005em;
+              padding-left: 21px;
+              padding-right: 17px;
+              padding-top: 20px;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}

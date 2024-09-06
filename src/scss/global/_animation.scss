@@ -51,474 +51,166 @@ animation
     opacity: 1;
   }
 }
-@keyframes fadeLeft {
-  0% {
-    opacity: 0;
-    left: 40%;
-    transform: translate(-50%, -50%);
-  }
-  100% {
-    opacity: 1;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-@keyframes fadeLeft-messageMv {
-  0% {
-    opacity: 0;
-    left: rclamp(6, 504, 375, 1920);
-  }
-  100% {
-    opacity: 1;
-    left: rclamp(26, 634, 375, 1920);
-  }
-}
-@keyframes fadeLeft-relaxMv {
-  0% {
-    opacity: 0;
-    top: rclamp(245, 489, 375, 1920);
-    left: rclamp(0, 427, 375, 1920);
-  }
-  100% {
-    opacity: 1;
-    top: rclamp(245, 489, 375, 1920);
-    left: rclamp(48.5, 477, 375, 1920);
-  }
-}
-@keyframes fadeLeft-spiceMv {
-  0% {
-    opacity: 0;
-    top: rclamp(172.5, 351, 375, 1920);
-    left: rclamp(4.5, 367, 375, 1920);
-  }
-  100% {
-    opacity: 1;
-    top: rclamp(172.5, 351, 375, 1920);
-    left: rclamp(54.5, 417, 375, 1920);
-  }
-}
-@keyframes fadeLeft-estateMv {
-  0% {
-    opacity: 0;
-    top: rclamp(207, 358, 375, 1920);
-    left: rclamp(36, 291, 375, 1920);
-  }
-  100% {
-    opacity: 1;
-    top: rclamp(207, 358, 375, 1920);
-    left: rclamp(86, 341, 375, 1920);
-  }
-}
-@keyframes fadeLeft-golfMv {
-  0% {
-    opacity: 0;
-    top: rclamp(178.5, 357, 375, 1920);
-    left: rclamp(73, 781, 375, 1920);
-  }
-  100% {
-    opacity: 1;
-    top: rclamp(178.5, 357, 375, 1920);
-    left: rclamp(123, 831, 375, 1920);
-  }
-}
-@keyframes fadeRight {
-  0% {
-    opacity: 0;
-    right: 40%;
-    transform: translate(73%, -10%);
-  }
-  100% {
-    opacity: 1;
-    right: 50%;
-    transform: translate(83%, -10%);
-  }
-}
-@keyframes fadeRight-outlineMv {
-  0% {
-    opacity: 0;
-    right: rclamp(10, 290, 375, 1920);
-  }
-  100% {
-    opacity: 1;
-    right: rclamp(40, 490, 375, 1920);
-  }
-}
-@keyframes fadeRight-03 {
-  0% {
-    opacity: 0;
-    right: 0%;
-  }
-  100% {
-    opacity: 1;
-    right: calc-percentage(40, 375);
-  }
-}
-@keyframes fadeRight-04 {
-  0% {
-    opacity: 0;
-    right: 0;
-    transform: translateX(0);
-  }
-  100% {
-    opacity: 1;
-    right: 50%;
-    transform: translate(50%, 0);
-  }
-}
-@keyframes fadeRight-05 {
-  0% {
-    opacity: 0;
-    right: 0;
-    top: rclamp(184, 358, 375, 1920);
-  }
-  100% {
-    opacity: 1;
-    top: rclamp(184, 358, 375, 1920);
-    right: rclamp(48.5, 473, 375, 1920);
-  }
-}
-@keyframes fadeDown {
-  0% {
-    opacity: 0;
-    top: 0;
-    transform: translate(0%, 221px);
-  }
-  100% {
-    opacity: 1;
-    top: 0;
-    transform: translate(0, 251px);
-  }
-}
-@keyframes spFadeDown {
-  0% {
-    opacity: 0;
-    top: 0;
-    transform: translate(0%, 0px);
-  }
-  100% {
-    opacity: 1;
-    top: 0;
-    transform: translate(0, 124.5px);
-  }
-}
 
-@keyframes topLinkHoverTit {
-  0% {
-    opacity: 0;
+// 買い物ボタンアニメーション
+.js-btn-01 {
+  transition: transform 0.3s ease;
+  position: relative;
+  &::after {
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: "";
+    display: block;
+    max-width: 202px;
+    width: 100%;
+    height: 49px;
+    background-color: $theme-color;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
   }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes topLinkHoverTit-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes topLinkHover {
-  0% {
-    opacity: 0;
-    transform: scale(0, 1);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1, 1);
-  }
-}
-@keyframes topLinkHover-out {
-  0% {
-    opacity: 1;
-    transform: scale(1, 1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0, 1);
-  }
-}
-@keyframes filler {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.46;
-  }
-}
-@keyframes filler-out {
-  0% {
-    opacity: 0.46;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes scrollFadeUp {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes philosophyFadeRight {
-  0% {
-    opacity: 0;
-    right: rclamp(35, 442, 375, 1920);
-  }
-  100% {
-    opacity: 1;
-    right: rclamp(75, 472, 375, 1920);
-  }
-}
-@keyframes scrollFadeUp {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes scrollFadeUp02 {
-  0% {
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(-130px);
-    opacity: 1;
-  }
-}
-@keyframes scrollFadeUp03 {
-  0% {
-    transform: translateY(-230px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(-260px);
-    opacity: 1;
-  }
-}
-@keyframes scrollFadeUp04 {
-  0% {
-    transform: translateY(-35px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(-80px);
-    opacity: 1;
-  }
-}
-@keyframes scrollFadeUp05 {
-  0% {
-    transform: translateY(30px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes scrollFadeUp06 {
-  0% {
-    transform: translateY(-325px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(-345px);
-    opacity: 1;
-  }
-}
-@keyframes scrollFadeUp07 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes scrollFadeUp08 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes scrollFadeUp08 {
-  0% {
-    transform: translate(rclamp(0, 200, 375, 1920), 20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(rclamp(0, 200, 375, 1920), 0);
-    opacity: 1;
-  }
-}
-@keyframes serviceHoverOn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.46;
-  }
-}
-@keyframes serviceHoverOut {
-  0% {
-    opacity: 0.46;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes serviceHoverTitOn {
-  0% {
-    // opacity: 0;
-    max-width: 582px;
-  }
-  100% {
-    opacity: 1;
-    max-width: 100%;
-  }
-}
-@keyframes serviceHoverTitOut {
-  0% {
-    max-width: 100%;
-  }
-  100% {
-    max-width: 582px;
-  }
-}
-@keyframes serviceHoverTitOnSp {
-  0% {
-    max-width: 205px;
-  }
-  100% {
-    max-width: 100%;
-  }
-}
-@keyframes serviceHoverTitOutSp {
-  0% {
-    max-width: 100%;
-  }
-  100% {
-    max-width: 205px;
-  }
-}
-@keyframes serviceHoverTitJapOn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes serviceHoverTitJapOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes recruitHoverOn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.46;
-  }
-}
-@keyframes recruitHoverOut {
-  0% {
-    opacity: 0.46;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes recruitHoverTitOn {
-  0% {
-    opacity: 0;
-    transform: translate(-50%,calc(-50% + 20px));
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-}
-@keyframes recruitHoverTitOut {
-  0% {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-50%,calc(-50% + 20px));
-  }
-}
-
-.is-fadeUpDelay-00 {
-  opacity: 0;
-  &.is-fadeUp {
-    opacity: 0;
-    transform: translateY(20px);
-    animation-name: scrollFadeUp;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 0;
-  }
-}
-
-.is-fadeUpDelay-01 {
-  opacity: 0;
-  &.is-fadeUp {
-    opacity: 0;
-    transform: translateY(20px);
-    animation-name: scrollFadeUp;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 0.5s;
-  }
-}
-
-.is-fadeUpDelay-02 {
-  opacity: 0;
-  &.is-fadeUp {
-    opacity: 0;
-    transform: translateY(20px);
-    animation-name: scrollFadeUp;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
-  }
-}
-.is-fadeUpDelay-03 {
-  opacity: 0;
-  &.is-fadeUp {
-    opacity: 0;
-    transform: translateY(-100px);
-    animation-name: scrollFadeUp02;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    @include mq(sp) {
-      animation-name: scrollFadeUp04;
-      transform: translateY(-35px);
+  &.smoothing {
+    &::after {
+      transform: scaleX(1);
     }
   }
 }
-.is-fadeUpDelay-04 {
+
+.l-header__btn-txt {
+  transition: color 0.3s;
+  &.change__color {
+    color: $wht01;
+  }
+}
+.l-header__btn-icon {
+  transition: all 0.3s;
+  transform: translateX(0px);
+  &.change__color {
+    background-color: $wht01 !important;
+    transform: translateX(5px);
+  }
+}
+
+// メインボタンアニメーション
+.m-foot__btn {
+  .js-btn-02 {
+    position: relative;
+    z-index: 2;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-width: 303px;
+      width: 100%;
+      height: 59px;
+      background-color: $theme-color;
+      transition: all 0.3s;
+      transform: scaleX(0);
+      transform-origin: left;
+      z-index: -1;
+    }
+    &.left-right {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+  &-icon {
+    transition: all 0.3s;
+    &.change__color02 {
+      background-color: $wht01 !important;
+      transform: translateX(-17px);
+    }
+  }
+  &-txt {
+    transition: color 0.3s;
+    &.change__color02 {
+      color: $wht01;
+    }
+  }
+}
+
+// FaQ内のボタン
+.m-faq-main__answer-btn {
+  .js-btn-03 {
+    position: relative;
+    z-index: 2;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-width: 303px;
+      width: 100%;
+      height: 59px;
+      background-color: $theme-color;
+      transition: all 0.3s;
+      transform: scaleX(0);
+      transform-origin: left;
+      z-index: -1;
+    }
+    &.left-right03 {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+  &__icon {
+    transition: all 0.3s;
+    &.change__color03 {
+      background-color: $wht01;
+      transform: translateX(-17px);
+    }
+  }
+  &__txt {
+    transition: color 0.3s;
+    &.change__color03 {
+      color: $wht01;
+    }
+  }
+}
+
+// FAQ
+.UP{
+  transform: rotate(0deg);
+  transition: all .3s;
+  &.rotate{
+    transform: rotate(180deg);
+  }
+}
+
+
+
+// スライドアップアニメーション
+.js-scroll__slide-up {
+  transition: all 0.5s 0.1s;
+  transform: translateY(30px);
   opacity: 0;
-  &.is-fadeUp {
-    opacity: 0;
-    transform: translateY(-230px);
-    animation-name: scrollFadeUp03;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+  &.is-active {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+// faq linkアニメーション
+.js-faq__link {
+  &.current {
+    &::after {
+      content: "";
+      display: block;
+      max-width: 294px;
+      width: 100%;
+      height: 1px;
+      background-color: $theme-color;
+      transform: scale(1) !important;
+    }
+    a p {
+      color: $theme-color !important;
+    }
   }
 }

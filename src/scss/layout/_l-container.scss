@@ -4,11 +4,17 @@
 /*============================
 .l-container
 ============================*/
-// .l-container {
-//   background-color: $bg-color;
-//   /* IE11 */
-//   @include onlyBrowser(ie11){
-//     overflow-x: hidden;
-//     overflow-y: visible;
-//   }
-// }
+.l-container {
+  /* IE11 */
+  @include onlyBrowser(ie11){
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+}
+
+.content_top{
+  padding-top: 10px;
+  border-top: 1px solid #f3dace;
+}
+
+

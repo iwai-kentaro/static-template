@@ -1,362 +1,64 @@
 @charset "UTF-8";
 @use "../global" as *;
 
-/*==========================
-l-header
-==========================*/
-// .l-header {
-//   $l-header: &;
-//   width: 100%;
-//   height: rclamp(70, 150, 375, 1920);
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   z-index: 9999;
-//   transform: translateY(0);
-//   transition: 0.3s;
-
-//   &.is-active {
-//     // background-color: $black-color;
-//   }
-//   &.is-scrolled {
-//     background-color: $primary-color !important;
-//       .l-header__item{
-//         color: $white-color !important;
-//       }
-//       .l-header__itemAnker{
-//         color: $white-color !important;
-//       }
-//       .l-header-accordion{
-//         color: $white-color !important;
-//       }
-//       .l-header-accordion__underListAnker{
-//         color: $white-color !important;
-//       }
-//       .l-header__hamburgerBorder{
-//         background-color: $white-color !important;
-//       }
-//       .l-header__tit{
-//         display: none !important;
-//       }
-//       .l-header-globalmenu__Tit{
-//         display: block !important;
-//       }
-//   }
-//   &__inner {
-//     @include flexStyle(flex-start, center);
-//     max-width: 1794px;
-//     width: 100%;
-//     height: rclamp(70, 150, 375, 1920);
-//     padding-left: rclamp(29, 63, 375, 1920);
-//     padding-right: rclamp(0, 63, 375, 1920);
-//     gap: rclamp(60, 120, 375, 1920);
-//     @include mq(sp) {
-//       justify-content: space-between;
-//     }
-//   }
-//   &__tit {
-//     max-width: rclamp(67,134 , 375, 1920);
-//     position: relative;
-//     z-index: 9999;
-//     &.is-active {
-//       display: none;
-//     }
-//     &.is-slideActive {
-//       display: none;
-//     }
-//     &Logo {
-//       max-width: rclamp(67,93 , 375, 1920);
-//     }
-//   }
-//   &__nav {
-//     @include flexStyle(center, center);
-//     gap: rclamp(24.5, 49, 375, 1920);
-//     font-weight: 300;
-//     @include mq(sp) {
-//       display: none;
-//     }
-//   }
-//   &__item {
-//     color: $text-base-color;
-//     @include letter-spacing-calc(100);
-//     font-size: 16px;
-//     font-weight: 300;
-//     &Anker{
-//       transition: all 0.3s;
-//       &.is-active{
-//         color: $white-color;
-//       }
-//     }
-//     a{
-//       font-weight: 300;
-//     }
-//   }
-//   // ハンバーガーメニュー
-//   &__hamburger {
-//     @include mq(sp) {
-//       max-width: 80px;
-//       width: 100%;
-//       height: 70px;
-//       @include flexStyle(center, center);
-//       flex-direction: column;
-//       position: relative;
-//       z-index: 9999;
-//       cursor: pointer;
-//     }
-//     &Border {
-//       @include mq(sp) {
-//         display: block;
-//         max-width: 35px;
-//         width: 100%;
-//         height: 1.75px;
-//         background-color: $border-base-color;
-//         transition: all 0.3s;
-//         transform: translate(0, 0);
-//         &:nth-child(1) {
-//           transform: translateY(-5.25px);
-//           &.is-active {
-//             transform: translate(0px, 4px) rotate(335deg);
-//             background-color: $white-color;
-//           }
-//           &.is-slideActive{
-//             background-color: $white-color;
-//           }
-//         }
-//         &:nth-child(2) {
-//           &.is-active {
-//             opacity: 0;
-//             visibility: hidden;
-//           }
-//           &.is-slideActive{
-//             background-color: $white-color;
-//           }
-//         }
-//         &:nth-child(3) {
-//           transform: translateY(5.25px);
-//           &.is-active {
-//             transform: translate(0px, 0px) rotate(-335deg);
-//             background-color: $white-color;
-//           }
-//           &.is-slideActive{
-//             background-color: $white-color;
-//           }
-//         }
-//       }
-//     }
-//   }
-//   // アコーディオンメニュー
-//   .l-header__item{
-//     &:nth-child(2){
-//       position: relative;
-//     }
-//   }
-//   &-accordion{
-//     display: none;
-//     position: absolute;
-//     border-left: 1px solid $border-base-color;
-//     padding-top: 14px;
-//     margin-top: 11px;
-//     &.is-active{
-//       border-left: 1px solid $white-color;
-//       .l-header-accordion__underListAnker{
-//         color: $white-color;
-//         font-weight: 300;
-//       }
-//       .l-header-accordion__underUnderListAnker{
-//         color: $white-color;
-//         font-weight: 300;
-//       }
-//       .l-header-accordion__underUnderList{
-//         &::before{
-//           color: $white-color;
-//           font-weight: 300;
-//         }
-//       }
-//     }
-//     &__under{
-//       &List{
-//         text-align: left;
-//         padding-left: 20px;
-//         margin-top: 13px;
-//         a{
-//           font-size: 16px;
-//           @include letter-spacing-calc(100);
-//         }
-//         &:nth-child(1){
-//           margin-top: 0px;
-//         }
-//         &:nth-child(3){
-//           margin-top: 36px;
-//         }
-//       }
-//       &Under{
-//         &Nav{
-//            @include flexStyle(flex-start ,center );
-//         }
-//         &List{
-//           &:nth-child(1){
-//             padding-left: 5px;
-//             &::before{
-//               content: "_";
-//               padding-right: 10px;
-//               font-size: 18px;
-//             }
-//           }
-//           &:nth-child(2){
-//             padding-left: 21px;
-//             &::before{
-//               content: "/";
-//               font-size: 18px;
-//               padding-right: 23px;
-//             }
-//           }
-//           &:nth-child(3){
-//             padding-left: 21px;
-//             &::before{
-//               content: "/";
-//               font-size: 18px;
-//               padding-right: 23px;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-//   // グローバルメニュー
-//   &-globalmenu {
-//     position: fixed;
-//     z-index: -4;
-//     top: 0;
-//     left: 0;
-//     width: 100vw;
-//     height: 100vh;
-//     background-color: $bg-color;
-//     transition: all 0.3s;
-//     opacity: 0;
-//     visibility: hidden;
-//     z-index: 2;
-//     &.is-active{
-//       opacity: 1;
-//       visibility: visible;
-//     }
-
-//     &__Tit {
-//       max-width: rclamp(67,93 , 375, 1920);
-//       display: none;
-//       position: relative;
-//       z-index: 9999;
-//       &.is-active {
-//         display: block;
-//       }
-//       &.is-slideActive{
-//         display: block;
-//       }
-//       &Logo {
-//         max-width: 93px;
-//         @include mq(tb) {
-//           max-width: 67px;
-//         }
-//         @include mq(sp) {
-//           max-width: 67px;
-//         }
-//       }
-//       img{
-//         max-width: rclamp(67,93 , 375, 1920);
-//       }
-//     }
-//     &__inner{
-//       max-width: 360px;
-//       width: 100%;
-//       height: auto;
-//       margin: 0 auto;
-//       padding-top: 86px;
-//       padding-bottom: 122.5px;
-//       padding-left: 30px;
-//       padding-right: 30px;
-//     }
-//     &__nav{
-//       text-align: left;
-//     }
-//     &__list{
-//       margin-top: 25px;
-//       margin-bottom: 23px;
-//       &:nth-child(3){
-//         .l-header-globalmenu__underList{
-//           &:nth-child(3){
-//             padding-top: 24px;
-//           }
-//         }
-//       }
-//       &:nth-child(5){
-//         .l-header-globalmenu__underList + .l-header-globalmenu__underList{
-//           padding-top: 9px;
-//         }
-//       }
-//       &Anker{
-//         color: $white-color;
-//         @include addfont_Inter(r);
-//         @include letter-spacing-calc(100);
-//         font-size: 14px;
-//       }
-//       a{
-//         color: $white-color;
-//       }
-//     }
-//     &__under{
-//       &Nav{
-//         margin-left: 35px;
-//         border-left: 1px solid $white-color;
-//         padding-left: 11px;
-//         padding-top: 5px;
-//       }
-//       &List{
-//         & + .l-header-globalmenu__underList{
-//           padding-top: 12px;
-//         }
-//         &Anker{
-//           color: $white-color;
-//           @include addfont_Inter(r);
-//           @include letter-spacing-calc(100);
-//           font-size: 14px;
-//         }
-//         a{
-//           color: $white-color;
-//         }
-//       }
-//       &Under{
-//         &Nav{
-//            @include flexStyle(flex-start , center);
-//            gap: 11px;
-//         }
-//         &List{
-//           a{
-//             color: $white-color;
-//             @include addfont_Inter(r);
-//             @include letter-spacing-calc(100);
-//             font-size: 14px;
-//           }
-//         }
-//       }
-//     }
-//     &__row{
-//       &Nav{
-//         margin-top: 25px;
-//          @include flexStyle(space-between , flex-start);
-//       }
-//       &List{
-//         a{
-//           color: $white-color;
-//           @include addfont_Inter(r);
-//           @include letter-spacing-calc(100);
-//           font-size: 14px;
-//         }
-//         &:nth-child(2){
-//           .l-header-globalmenu__rowListAnker{
-//             font-size: 9px;
-//           }
-//         }
-//       }
-//     }
-
-//   }
-// }
+/*============================
+.l-underHeader
+============================*/
+.l-header {
+  position: relative;
+  width: 100vw;
+  height: 90px;
+  background-image: url("../images/global/headerbc.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  &__tit{
+    display: flex;
+    align-content: center;
+    position: relative;
+    width: 100%;
+    height: 90px;
+    .liftagelogo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 128px;
+      height: 56px;
+    }
+  }
+  &__btn{
+    max-width: 202px;
+    width: 100%;
+    height: 49px;
+    a{
+      max-width: 202px;
+      width: 100%;
+      height: 49px;
+      background-color: $wht01;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 27px;
+      color: $text-base-color;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 51px;
+    }
+    &-txt{
+      @include fontStyle();
+      font-size: 18px;
+      font-weight: bold;
+    }
+    &-icon{
+      max-width: 24px;
+      width: 100%;
+      height: 24px;
+      mask-image: url("../images/global/Iconly-Broken-Buy.svg");
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      background-color: $theme-color;
+    }
+  }
+}

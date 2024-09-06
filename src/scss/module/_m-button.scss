@@ -1,0 +1,98 @@
+@charset "UTF-8";
+@use "../global" as *;
+
+/*============================
+m-foot
+============================*/
+.m-foot__btn {
+  max-width: 303px;
+  width: 100%;
+  height: 59px;
+  
+  a {
+    max-width: 303px;
+    width: 100%;
+    height: 59px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    background-color: $wht01;
+    color: $text-base-color;
+    font-size: 14px;
+    @include fontStyle();
+    font-weight: bold;
+    line-height: calc(20 / 14);
+    letter-spacing: 0.05em;
+    gap: 66px;
+    border: 1px solid $grey01;
+  }
+  &-icon {
+    max-width: 24px;
+    width: 100%;
+    height: 24px;
+    mask-image: url("../images/global/Iconly-Light-Outline-Arrow---Right-Circle.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $theme-color;
+    transform: translateX(-23px);
+  }
+}
+
+.m-faq-main__answer-btn {
+  max-width: 303px;
+  width: 100%;
+  height: 59px;
+  &Box{
+    max-width: 303px;
+    width: 100%;
+    height: 59px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $wht01;
+    color: $text-base-color;
+    font-size: 14px;
+    @include fontStyle();
+    font-weight: bold;
+    line-height: calc(20 / 14);
+    letter-spacing: 0.05em;
+    gap: 66px;
+    // padding-left: 37px;
+    border: 1px solid $grey01;
+    opacity: 1 !important;
+  }
+  a {
+    max-width: 303px;
+    width: 100%;
+    height: 59px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $wht01;
+    color: $text-base-color;
+    font-size: 14px;
+    @include fontStyle();
+    font-weight: bold;
+    line-height: calc(20 / 14);
+    letter-spacing: 0.05em;
+    gap: 66px;
+    // padding-left: 37px;
+    border: 1px solid $grey01;
+    opacity: 1 !important;
+  }
+  &__txt{
+    padding-left: 37px;
+  }
+  &__icon {
+    max-width: 24px;
+    width: 100%;
+    height: 24px;
+    mask-image: url("../images/global/Arrow---Right-Circle-grey.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $grey01;
+    transform: translateX(-23px);
+  }
+}

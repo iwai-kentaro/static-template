@@ -1,39 +1,21 @@
 @charset "UTF-8";
 
 // -----------------------
-// colors
+// base colors
 // -----------------------
-//背景
-$bg-color: #16242E;
-$bg-sab-color: #CED9DF;
-$bg-btn-color: #B8B4B3;
-$bg-post-color: #eff3fa;
-$bg-input-color: #E5E5E5;
+$theme-color: #840A47;
+$accent-color: #CFA513;
+$text-base-color: #2F252A;
 
-//アクセント
-$primary-color: #16242E;
-$primary-sab-color: #CED9DF;
+// -----------------------
+// 背景グラデーション colors
+// -----------------------
+$gradation01:#A00338;
 
-//テキスト
-$text-base-color: #16242E;
-$text-sab-color: #CED9DF;
-$text-sab02-color: #839AA6;
-$text-sab03-color: #B8B4B3;
-$text-sab04-color: #808080;
-$text-btn-color: #16242E;
-$text-require-color: #B91C22;
-$text-change-color: #17b0be;
-
-//ボーダー
-$border-base-color: #16242E;
-$border-contact-cheackbox-color: #e5e5e5;
-$border-contact-color: #8F8F90;
-
-//汎用
-$white-color: #ffffff;
-$black-color: #000000;
-$grey-color: #cccccc;
-$red-color: #ec0000;
+// -----------------------
+// 商品購入の背景 colors
+// -----------------------
+$item-back:#F4E1E2;
 
 // -----------------------
 // imgPath
@@ -41,12 +23,55 @@ $red-color: #ec0000;
 $imgPath: "../";
 
 // -----------------------
-// acd
+// color list
 // -----------------------
-$version: "2024" +#{random(9999)};
-$acd: "?" + $version;
+// 白
+$wht01: #ffffff;
 
-p{
-    font-size: 50px;
-    color: red;
-}
+// 黒
+$blk01: #000000;
+$blk02: #2c2c2c;
+$blk03: #2F252A;
+
+// 青
+$blue01: #2da8e1;
+$blue02: #0042ff;
+// $blue03:#BFE5F6;
+// $blue04:#F2FAFE;
+// $blue05:#E8F5FC;
+
+// ピンク
+$pink01:#f7699c;
+$pink02: #EED5E1;
+$pink03: #F8EDF3;
+$pink04: #DC1A5B;
+$pink05: #F4E1E2;
+$pink06: #F7EFF3;
+
+// 赤
+$red01: #d96382;
+
+// グレー
+$grey01: #B5B5B5;
+$grey02: #484848;
+$grey03: #bababa;
+$grey04: #e0e0e0;
+$grey05: #707070;
+$grey06: #f4f4f4;
+$grey07: #f5f5f5;
+$grey08: #A8A4A6;
+$grey09: #F0F0F0;
+
+// オレンジ
+$orange01: #ee8a18;
+
+// 黄色
+$yellow01: #fff1e2;
+
+// ゴールド
+$gold01: #D39713;
+$gold02: #CFA513;
+$gold03: #DFBF6E;
+
+// 緑
+$green01: #3A9F39;

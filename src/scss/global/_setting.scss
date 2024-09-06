@@ -1,0 +1,21 @@
+@charset "UTF-8";
+@use "variable" as *;
+
+body {
+    color: $text-base-color;
+}
+
+// -----------------------
+// aリセット
+// -----------------------
+a.reset {
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .3s;
+    opacity: 1;
+    &:hover{
+        transition: all .3s;
+        opacity: 0.8;
+    }
+}
+

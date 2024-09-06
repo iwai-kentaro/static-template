@@ -1,0 +1,80 @@
+@charset "UTF-8";
+@use "../global" as *;
+
+/*==========================
+リフタージュのこだわり
+p-collagen
+==========================*/
+.p-collagen {
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+  &-main {
+    &__inner {
+      max-width: 846px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+    &__tit03 {
+      &_09 {
+        margin-top: 137px;
+        margin-bottom: 65.7px;
+      }
+    }
+    &__txt01 {
+      p {
+        font-size: 16px;
+        @include fontStyle();
+        font-weight: normal;
+        letter-spacing: 0.005em;
+        line-height: calc(36 / 16);
+        color: $text-base-color;
+      }
+    }
+    &__img {
+      margin-top: 80.1px;
+      margin-bottom: 59.7px;
+      &-02 {
+        margin-top: 80px;
+      }
+    }
+    &__txt02 {
+      margin: 0 auto;
+      max-width: 772px;
+      width: 100%;
+      height: auto;
+      text-align: left;
+      &_01 {
+        font-size: 16px;
+        @include fontStyle();
+        letter-spacing: 0.005em;
+        line-height: calc(32 / 16);
+      }
+      &_02 {
+        font-size: 16px;
+        @include fontStyle();
+        letter-spacing: 0.005em;
+        line-height: calc(32 / 16);
+        margin-top: 20.1px;
+      }
+      &_03 {
+        font-size: 12px;
+        @include fontStyle();
+        letter-spacing: 0.005em;
+        line-height: calc(32 / 12);
+        margin-top: 29.1px;
+      }
+      .supp {
+        font-size: 12px;
+        font-weight: normal;
+        @include fontStyle();
+        letter-spacing: 0.005em;
+        line-height: calc(32 / 12);
+        color: $text-base-color;
+        margin-left: -10px;
+      }
+    }
+  }
+}

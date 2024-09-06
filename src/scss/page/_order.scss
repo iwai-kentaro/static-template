@@ -1,0 +1,912 @@
+@charset "UTF-8";
+@use "../global" as *;
+
+/*==========================
+商品のご購入
+p-order
+==========================*/
+.p-order {
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+  &-main {
+    &__inner {
+      max-width: 1080px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+    &__tit03 {
+      &_13 {
+        margin-top: 140.5px;
+        margin-bottom: 145.5px;
+      }
+      &_14 {
+        margin-top: 145.5px;
+        margin-bottom: 77.1px;
+      }
+    }
+    &__box02 {
+      max-width: 1080px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      position: relative;
+      margin-top: 181px;
+    }
+    &__box {
+      max-width: 1080px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      position: relative;
+      &-tit {
+        max-width: 659px;
+        width: 100%;
+        height: 65px;
+        font-size: 24px;
+        @include fontStyle();
+        font-weight: normal;
+        letter-spacing: 0.005em;
+        line-height: calc(35 / 24);
+        background-color: $theme-color;
+        color: $wht01;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: -41px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &-content {
+        max-width: 1080px;
+        width: 100%;
+        height: auto;
+        background-color: $pink03;
+        padding-bottom: 80px;
+        &_imgLtxtR {
+          display: flex;
+          align-items: center;
+          justify-content: left;
+          gap: 73px;
+          padding-top: 72px;
+          padding-bottom: 20px;
+          &-onemonthset {
+            padding-left: 49px;
+          }
+          &-txt01 {
+            font-size: 26px;
+            @include fontStyle();
+            font-weight: 900;
+            letter-spacing: 0.005em;
+            line-height: calc(37 / 26);
+            color: $theme-color;
+            sup {
+              font-size: 12px;
+              @include fontStyle();
+              font-weight: 900;
+              letter-spacing: 0.005em;
+              line-height: calc(17 / 12);
+              color: $theme-color;
+            }
+          }
+        }
+        &_txt02 {
+          font-size: 20px;
+          @include fontStyle();
+          font-weight: 700;
+          letter-spacing: 0.005em;
+          line-height: calc(29 / 20);
+          padding-bottom: 30px;
+        }
+        &_grapePeach {
+          margin-bottom: 14.9px;
+        }
+        &_txt03 {
+          font-size: 12px;
+          @include fontStyle();
+          font-weight: 900;
+          letter-spacing: 0.005em;
+          line-height: calc(17 / 12);
+          padding-bottom: 48px;
+        }
+      }
+    }
+    &__graphBox {
+      max-width: 928px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      position: relative;
+      padding-bottom: 22.5px;
+      &-txtBox {
+        position: absolute;
+        top: 71px;
+        right: 56px;
+      }
+      &-graph02Txt {
+        text-align: left;
+        font-size: 26px;
+        @include fontStyle();
+        font-weight: 700;
+        letter-spacing: 0.005em;
+        line-height: calc(37 / 26);
+        span {
+          color: $theme-color;
+        }
+        sup {
+          font-size: 16px;
+        }
+      }
+      &-graph02Txt02 {
+        text-align: left;
+        font-size: 16px;
+        @include fontStyle();
+        font-weight: 700;
+        letter-spacing: 0.005em;
+        line-height: calc(24 / 16);
+        color: $grey08;
+      }
+    }
+    &__desc {
+      &-colBox {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        gap: 52px;
+      }
+      &-tit {
+        max-width: 383px;
+        width: 100%;
+        height: 94px;
+        font-size: 24px;
+        @include fontStyle();
+        font-weight: 700;
+        letter-spacing: 0.005em;
+        line-height: calc(45 / 24);
+        color: $wht01;
+        background-color: $gold02;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: -61px;
+        left: 50%;
+        transform: translateX(-50%);
+        span {
+          display: inline;
+          font-size: 16px;
+          @include fontStyle();
+          font-weight: 700;
+          letter-spacing: 0.005em;
+          line-height: calc(24 / 16);
+          color: $wht01;
+        }
+      }
+      &-colLeft {
+        max-width: 486px;
+        width: 100%;
+        height: auto;
+        background-color: $wht01;
+        margin-top: 61px;
+        position: relative;
+        padding-top: 63px;
+      }
+      &-colRight {
+        max-width: 486px;
+        width: 100%;
+        height: auto;
+        background-color: $wht01;
+        margin-top: 61px;
+        position: relative;
+        padding-top: 63px;
+      }
+      &-txt01 {
+        font-size: 24px;
+        @include fontStyle();
+        font-weight: 700;
+        letter-spacing: 0.005em;
+        line-height: calc(35 / 25);
+      }
+      &-offset03 {
+        margin-bottom: 0;
+      }
+      &-offset {
+        margin-bottom: 37.5px;
+        &Box {
+          max-width: 411px;
+          width: 100%;
+          height: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 28px;
+          position: relative;
+          margin: 0 auto;
+          margin-top: 32px;
+          &_grape {
+            margin-top: -10px;
+          }
+          &_txt {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 195px;
+            width: 100%;
+            height: 92px;
+            font-size: 16px;
+            @include fontStyle();
+            font-weight: 700;
+            letter-spacing: 0.005em;
+            line-height: calc(24 / 16);
+            border: 1px solid $theme-color;
+          }
+          &_txt01 {
+            font-size: 26px;
+            @include fontStyle();
+            font-weight: 700;
+            letter-spacing: 0.005em;
+            line-height: calc(37 / 26);
+            color: $theme-color;
+          }
+          &_txt02 {
+            font-size: 20px;
+            @include fontStyle();
+            font-weight: 700;
+            letter-spacing: 0.005em;
+            line-height: calc(29 / 20);
+            color: $theme-color;
+          }
+          &_circle {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            max-width: 78px;
+            width: 100%;
+            height: 78px;
+            font-size: 16px;
+            @include fontStyle();
+            font-weight: 700;
+            letter-spacing: 0.005em;
+            line-height: calc(24 / 16);
+            color: $wht01;
+            background-color: $theme-color;
+          }
+        }
+        &Box02 {
+          max-width: 411px;
+          width: 100%;
+          height: 92px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid $theme-color;
+          margin: 0 auto;
+          position: relative;
+          margin-top: 32px;
+          &_txt {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 411px;
+            width: 100%;
+            height: auto;
+            font-size: 16px;
+            @include fontStyle();
+            font-weight: 700;
+            letter-spacing: 0.005em;
+            line-height: calc(24 / 16);
+            &01 {
+              font-size: 30px;
+              @include fontStyle();
+              font-weight: 700;
+              letter-spacing: 0.005em;
+              line-height: calc(44 / 30);
+              color: $theme-color;
+            }
+            &02 {
+              font-size: 24px;
+              @include fontStyle();
+              font-weight: 700;
+              letter-spacing: 0.005em;
+              line-height: calc(35 / 24);
+              color: $theme-color;
+            }
+          }
+        }
+        &Box03 {
+          max-width: 411px;
+          width: 100%;
+          height: 92px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid $theme-color;
+          margin: 0 auto;
+          position: relative;
+          &_txt {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 411px;
+            width: 100%;
+            height: auto;
+            font-size: 23px;
+            @include fontStyle();
+            font-weight: 700;
+            letter-spacing: 0.005em;
+            line-height: calc(24 / 16);
+            &01 {
+              font-size: 30px;
+              @include fontStyle();
+              font-weight: 700;
+              letter-spacing: 0.005em;
+              line-height: calc(44 / 30);
+              color: $theme-color;
+              font-size: 43px;
+            }
+            &02 {
+              font-size: 34px;
+              @include fontStyle();
+              font-weight: 700;
+              letter-spacing: 0.005em;
+              line-height: calc(35 / 24);
+              color: $theme-color;
+            }
+            &03 {
+              font-size: 30px;
+              @include fontStyle();
+              font-weight: 700;
+              letter-spacing: 0.005em;
+              line-height: calc(44 / 30);
+              color: $text-base-color;
+            }
+          }
+          &_grape {
+            margin-top: 24.5px;
+          }
+          &_whitegrape02 {
+            margin-top: 0;
+            margin-top: 70px;
+          }
+        }
+      }
+      &-tagBox {
+        max-width: 382px;
+        width: 100%;
+        height: 75px;
+        border: 1px solid $gold02;
+        margin: 0 auto;
+        position: relative;
+      }
+      &-tag {
+        position: absolute;
+        top: -8px;
+        left: 8px;
+        max-width: 88px;
+        width: 100%;
+        height: 27px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        @include fontStyle();
+        font-weight: 700;
+        letter-spacing: 0.005em;
+        line-height: calc(20 / 14);
+        color: $wht01;
+        background-color: $gold02;
+        &Txt {
+          text-align: left;
+          position: absolute;
+          top: 60%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          white-space: nowrap;
+          &01 {
+            font-size: 16px;
+            @include fontStyle();
+            font-weight: 700;
+            letter-spacing: 0.005em;
+            line-height: calc(24 / 16);
+          }
+          &02 {
+            margin-top: 4px;
+            font-size: 10px;
+            @include fontStyle();
+            font-weight: 700;
+            letter-spacing: 0.005em;
+            line-height: calc(10 / 15);
+          }
+        }
+      }
+      &-onemonthset {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 19px;
+        margin-top: 25px;
+        &_circle02 {
+          font-size: 16px;
+          @include fontStyle();
+          font-weight: 700;
+          letter-spacing: 0.005em;
+          line-height: calc(24 / 16);
+          color: $wht01;
+          background-color: $gold02;
+          max-width: 75px;
+          width: 100%;
+          height: 75px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        &_txt {
+          font-size: 30px;
+          @include fontStyle();
+          font-weight: 700;
+          letter-spacing: 0.005em;
+          line-height: calc(44 / 30);
+          margin-top: 10px;
+        }
+        &_txt02 {
+          font-size: 30px;
+          @include fontStyle();
+          font-weight: 700;
+          letter-spacing: 0.005em;
+          line-height: calc(44 / 30);
+          margin-top: 10px;
+          &--large {
+            margin-top: 88px;
+          }
+        }
+        &_txt03 {
+          font-size: 30px;
+          @include fontStyle();
+          font-weight: 700;
+          letter-spacing: 0.005em;
+          line-height: calc(44 / 30);
+          margin-top: 0px;
+        }
+      }
+      &-onemonthset02 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 19px;
+        margin-top: 12px;
+      }
+      &-priceSet01 {
+        margin-top: -10px;
+      }
+      &-course {
+        max-width: 383px;
+        width: 100%;
+        height: 61px;
+        background-color: $theme-color;
+        color: $wht01;
+        font-size: 26px;
+        @include fontStyle();
+        font-weight: 700;
+        letter-spacing: 0.005em;
+        line-height: calc(37 / 26);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 31px;
+        margin-bottom: 24px;
+      }
+      &-choice {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 17px;
+        &_txt {
+          font-size: 16px;
+          @include fontStyle();
+          font-weight: 700;
+          letter-spacing: 0.005em;
+          line-height: calc(24 / 16);
+        }
+      }
+      &__buyBtn {
+        max-width: 343px;
+        width: 100%;
+        height: 82px;
+        background-color: $green01;
+        margin: 0 auto;
+        a {
+          display: block;
+          max-width: 343px;
+          width: 100%;
+          height: 100%;
+          color: $wht01;
+          font-size: 18px;
+          @include fontStyle();
+          font-weight: 700;
+          letter-spacing: 0.005em;
+          // line-height: calc(26/18);
+          line-height: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          span {
+            vertical-align: middle;
+          }
+        }
+        &_kome {
+          font-size: 10px;
+          @include fontStyle();
+          font-weight: 700;
+          letter-spacing: 0.005em;
+          line-height: calc(15 / 10);
+          padding-right: 10px;
+        }
+        &_hako {
+          font-size: 24px;
+          @include fontStyle();
+          font-weight: 700;
+          letter-spacing: 0.005em;
+          line-height: calc(35 / 24);
+          padding-right: 13.5px;
+          vertical-align: middle;
+          padding-top: 10.5px;
+          padding-bottom: 10.5px;
+          border-right: 1px solid $wht01;
+        }
+        &_icon {
+          mask-image: url("../images/global/Iconly-Broken-Buy.svg");
+          max-width: 22px;
+          width: 100%;
+          height: 22px;
+          mask-position: center;
+          mask-repeat: no-repeat;
+          mask-size: contain;
+          background-color: $wht01;
+          vertical-align: middle;
+        }
+        &_txt {
+          font-size: 22px;
+          @include fontStyle();
+          font-weight: 700;
+          letter-spacing: 0.005em;
+          line-height: calc(32 / 22);
+          padding-left: 24.5px;
+          padding-right: 18px;
+          span {
+            vertical-align: middle;
+          }
+        }
+      }
+      &__buyBtn02 {
+        max-width: 343px;
+        width: 100%;
+        height: 82px;
+        background-color: $pink04;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        a {
+          display: block;
+          max-width: 343px;
+          width: 100%;
+          height: 100%;
+          color: $wht01;
+          font-size: 18px;
+          @include fontStyle();
+          font-weight: 700;
+          letter-spacing: 0.005em;
+          line-height: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          span {
+            vertical-align: middle;
+          }
+        }
+        &_kome {
+          font-size: 10px;
+          @include fontStyle();
+          font-weight: 700;
+          letter-spacing: 0.005em;
+          line-height: calc(15 / 10);
+          padding-right: 10px;
+        }
+        &_hako {
+          font-size: 24px;
+          @include fontStyle();
+          font-weight: 700;
+          letter-spacing: 0.005em;
+          line-height: calc(35 / 24);
+          padding-right: 13.5px;
+          vertical-align: middle;
+          padding-top: 10.5px;
+          padding-bottom: 10.5px;
+          border-right: 1px solid $wht01;
+        }
+        &_icon {
+          mask-image: url("../images/global/Iconly-Broken-Buy.svg");
+          max-width: 22px;
+          width: 100%;
+          height: 22px;
+          mask-position: center;
+          mask-repeat: no-repeat;
+          mask-size: contain;
+          background-color: $wht01;
+          vertical-align: middle;
+        }
+        &_txt {
+          font-size: 22px;
+          @include fontStyle();
+          font-weight: 700;
+          letter-spacing: 0.005em;
+          line-height: calc(32 / 22);
+          padding-left: 24.5px;
+          padding-right: 18px;
+          span {
+            vertical-align: middle;
+          }
+        }
+      }
+      &__txtKome {
+        max-width: 343px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        font-size: 10px;
+        @include fontStyle();
+        font-weight: 700;
+        letter-spacing: 0.005em;
+        line-height: calc(15 / 10);
+        margin-bottom: 40px;
+        text-align: left;
+      }
+    }
+    &__notes {
+      max-width: 1080px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      text-align: left;
+      margin-top: 20px;
+      &-txt {
+        font-size: 14px;
+        @include fontStyle();
+        font-weight: 700;
+        letter-spacing: 0.005em;
+        line-height: calc(20 / 14);
+        color: $grey01;
+        &01 {
+          font-size: 14px;
+          @include fontStyle();
+          font-weight: 700;
+          letter-spacing: 0.005em;
+          line-height: calc(20 / 14);
+          color: $grey01;
+          text-decoration: underline;
+          a {
+            color: $blue02;
+          }
+        }
+      }
+    }
+    &__txt {
+      &01 {
+        font-size: 16px;
+        @include fontStyle();
+        font-weight: 700;
+        letter-spacing: 0.005em;
+        line-height: calc(24 / 16);
+        margin-bottom: 90px;
+      }
+      &02 {
+        font-size: 18px;
+        @include fontStyle();
+        font-weight: 400;
+        letter-spacing: 0.005em;
+        line-height: calc(26 / 18);
+        &_30color {
+          color: $theme-color;
+          font-size: 30px;
+          font-weight: 400;
+          @include fontStyle();
+          letter-spacing: 0.005em;
+          line-height: calc(44 / 30);
+        }
+      }
+      &03 {
+        font-size: 18px;
+        @include fontStyle();
+        font-weight: 400;
+        letter-spacing: 0.005em;
+        line-height: calc(26 / 18);
+      }
+    }
+    &__tit04 {
+      &_01 {
+        margin-bottom: 83px;
+      }
+      &_02 {
+        margin-bottom: 83px;
+      }
+    }
+    &__supportBox {
+      max-width: 915px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      &-listBox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+      }
+      &-list {
+        position: relative;
+        max-width: 265px;
+        width: 100%;
+        height: 199px;
+        margin-top: 37px;
+      }
+      &-num {
+        position: absolute;
+        z-index: 1;
+        top: -37px;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 60px;
+        width: 100%;
+        height: 60px;
+        border-radius: 50%;
+        background-color: $pink05;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include fontStyle();
+        font-weight: 400;
+        letter-spacing: 0.005em;
+        line-height: calc(35 / 24);
+      }
+      &-item {
+        position: relative;
+        max-width: 265px;
+        width: 100%;
+        height: 199px;
+        border: 1px solid $theme-color;
+        &_txtBox {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          max-width: 265px;
+          width: 100%;
+        }
+        &_txt20 {
+          font-size: 20px;
+          @include fontStyle();
+          font-weight: 400;
+          letter-spacing: 0.005em;
+          line-height: calc(29 / 20);
+        }
+        &_txt02 {
+        }
+        &_txt16 {
+          font-size: 16px;
+          @include fontStyle();
+          font-weight: 400;
+          letter-spacing: 0.005em;
+          line-height: calc(24 / 16);
+          &-margin16 {
+            margin-top: 16px;
+          }
+        }
+        &_txt36 {
+          font-size: 36px;
+          @include fontStyle();
+          font-weight: 400;
+          letter-spacing: 0.005em;
+          line-height: calc(52 / 36);
+          color: $theme-color;
+        }
+        &_txt24 {
+          font-size: 24px;
+          @include fontStyle();
+          font-weight: 400;
+          letter-spacing: 0.005em;
+          line-height: calc(35 / 24);
+          color: $theme-color;
+        }
+        &_txt12 {
+          font-size: 12px;
+          @include fontStyle();
+          font-weight: 400;
+          letter-spacing: 0.005em;
+          line-height: calc(17 / 12);
+          color: $theme-color;
+          &_leftcolor {
+            max-width: 225px;
+            width: 100%;
+            margin: 0 auto;
+            text-align: left;
+            color: $grey01;
+          }
+        }
+      }
+      &-notes {
+        text-align: left;
+        font-size: 14px;
+        @include fontStyle();
+        font-weight: 400;
+        letter-spacing: 0.005em;
+        line-height: calc(20 / 14);
+        color: $grey01;
+        margin-top: 30px;
+        margin-bottom: 110px;
+      }
+    }
+    &__supportBox02 {
+      &-descBox {
+        max-width: 915px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 80px;
+        margin-bottom: 140px;
+        padding-top: 78px;
+        padding-bottom: 64px;
+        background-color: $grey09;
+      }
+      &-desc {
+        max-width: 811px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        text-align: left;
+        &_txt01 {
+          font-size: 24px;
+          @include fontStyle();
+          font-weight: 400;
+          letter-spacing: 0.005em;
+          line-height: calc(35 / 24);
+          color: $gold02;
+          margin-bottom: 45px;
+        }
+        &_txt-common {
+          font-size: 16px;
+          @include fontStyle();
+          font-weight: 400;
+          letter-spacing: 0.005em;
+          line-height: calc(24 / 16);
+          margin-bottom: 25px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          &02 {
+            font-size: 12px;
+            @include fontStyle();
+            font-weight: 400;
+            letter-spacing: 0.005em;
+            line-height: calc(17 / 12);
+            margin-bottom: 25px;
+          }
+        }
+      }
+    }
+  }
+}
